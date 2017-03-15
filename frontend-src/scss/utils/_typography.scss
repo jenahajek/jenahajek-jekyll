@@ -1,3 +1,7 @@
+// stale bych chtel sjednotit nazvoslovi nadpisu. Bude ale asi lepsi pockat, nez jak se to vyvrbi a pak to zkultivovat. Jako cesticky pres travu na sidlistich...
+
+
+
 @mixin ff--heading {
     font-family: "chaparral-pro-display", georgia, sans-serif;
     font-style: italic;
@@ -12,49 +16,15 @@
 
 
 
-@mixin huge-type {
-    @include ff--heading;
-    line-height: 1.1;
-    @include type-setting(3);
-    // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 
-    @include respond-to(large) {
-        line-height: 1.1;
-        font-size: 6.5vw;
-        margin: ($base-line-height * 4) 0 ($base-line-height / 2);
-    }
-}
-
-@mixin perex {
-    @include type-setting(1);
-    font-style: italic;
-    // color: palette(gray);
-    // text-align: center;
-    // margin: 0 auto $spacing;
-    // max-width: 780px;
-}
-
-
-
-.scope-text .perex,
-.perex {
-    @include perex;
-    line-height: 1.5;
-}
-
-.section__heading {
-    @include ff--body;
-    @include type-setting(2);
-    font-weight: bold;
-    font-style: normal;
-}
 
 // --------------------------
 // Base typographic styles
 // --------------------------
 
 // Define your base font-size here; most elements will inherit this.
-html {
+html,
+body {
     @include ff--body;
 }
 
@@ -74,32 +44,74 @@ svg text {
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
     font-weight: 400;
-
-    // @include respond-to(retina) {
-    //     font-weight: 300;
-    // }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    // font-weight: bold;
+    @include type-setting(1);
+}
+
+
+
+
+
+// --------------------------
+// Base typographic scale
+// --------------------------
+// there is a type scale map in config.scss
+
+
+
+
+
+// --------------------------
+// Custom typographic styles
+// --------------------------
+@mixin huge-type {
+    @include ff--heading;
+    line-height: 1.1;
+    @include type-setting(3);
+    // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    @include respond-to(large) {
+        line-height: 1.1;
+        font-size: 6.5vw;
+        margin: ($base-line-height * 4) 0 ($base-line-height / 2);
+    }
+}
+
+@mixin perex {
+    @include type-setting(1);
+    line-height: 1.5;
     font-style: italic;
 }
 
-h1,
-.heading--alpha {
-    @include type-setting(3);
-    @include ff--heading;
-}
-
-h2,
-.heading--beta {
+@mixin section__heading {
+    @include ff--body;
     @include type-setting(2);
+    font-weight: bold;
+    font-style: normal;
 }
 
-h3,
-.heading--gamma {
-    @include type-setting(1);
+//------------------------------------------
+
+
+
+.huge-type {
+    @include huge-type;
 }
+
+.scope .perex,
+.perex {
+    @include perex;
+}
+
+.section__heading {
+    @include section__heading;
+}
+
+
+
+
 
 p {
     @include type-setting(0);
@@ -115,10 +127,19 @@ input, form, textarea {
 // --------------------------
 // - for user generated content (where adding classes would de difficult) we
 //   mark only container and then style headings with nesting
-.scope-text {
+.scope {
+    h1 {
+        // @include type-setting(3);
+    }
+
     h2 {
+        @include type-setting(2);
         margin-top: ($spacing * 3);
         margin-bottom: $spacing;
+    }
+
+    h3 {
+        @include type-setting(1);
     }
 
     h4 {

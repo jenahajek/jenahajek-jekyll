@@ -95,33 +95,34 @@ $link-color--focus: darken($link-color--hover, 10);
 // --------------------------
 // Type scale map
 // --------------------------
-html {
-    font-size: 143.75%; // set to 23px
+// 
+// set vertical rhythm https://github.com/markgoodyear/postcss-vertical-rhythm/
+// it needs to be in body and have this syntax
+html,
+body {
+    font: 20px/1.5 serif;
 }
-
-$base-font-size: 1rem;
-$base-line-height: 1.4 * $base-font-size;
 
 $type-settings: (
   -1: (
     font-size: 0.75rem,
-    line-height: $base-line-height
+    line-height: 1vr
   ),
   0: (
     font-size: 1rem,
-    line-height: $base-line-height
+    line-height: 1vr
   ),
   1: (
     font-size: 1.333rem,
-    line-height: $base-line-height * 2
+    line-height: 2vr
   ),
   2: (
     font-size: 1.778rem,
-    line-height: $base-line-height * 2
+    line-height: 2vr
   ),
   3: (
     font-size: 2.3686rem,
-    line-height: $base-line-height * 3
+    line-height: 3vr
   )
 
 );
@@ -146,10 +147,10 @@ $type-settings: (
 // --------------------------
 // Spacing
 // --------------------------
-$spacing: $base-line-height;
+$spacing: 1vr;
 $max-width: 1400px;
 
-
+$base-line-height: 1vr;
 
 
 
