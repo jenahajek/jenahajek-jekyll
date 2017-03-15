@@ -1,0 +1,50 @@
+// ==========================
+// Utility classes
+// ==========================
+// - specific, simple & agnostic classes useful for kickstart any project.
+// - add class to html where needed.
+// - u- prefix (as utility :))
+
+
+// Visually hidden, but still accessible for screen readers.
+.u-screen-reader-text,
+.u-vishid {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+// .u-hidden {
+//     display: none;
+// }
+
+// .u-group,
+// .u-clearfix {
+//     @include clearfix();
+// }
+
+// .u-muted,
+// .u-text-muted,
+// .u-type--muted {
+//     color: $type-color--muted;
+// }
+
+// .u-no-print {
+//     @media print {
+//         display: none !important;
+//     }
+// }
+
+// .u-center {
+//     text-align: center;
+// }
+
+// // to prevent long lines of text which are hard to read
+// .u-text-restricted {
+//     max-width: 660px;
+// }

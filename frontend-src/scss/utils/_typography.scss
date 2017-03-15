@@ -1,0 +1,223 @@
+@mixin ff--heading {
+    font-family: "chaparral-pro-display", georgia, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+@mixin ff--body {
+    font-family: "chaparral-pro", georgia, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+@mixin huge-type {
+    @include ff--heading;
+    line-height: 1.1;
+    @include type-setting(3);
+    // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    @include respond-to(large) {
+        line-height: 1.1;
+        font-size: 6.5vw;
+        margin: ($base-line-height * 4) 0 ($base-line-height / 2);
+    }
+}
+
+@mixin perex {
+    @include type-setting(1);
+    font-style: italic;
+    // color: palette(gray);
+    // text-align: center;
+    // margin: 0 auto $spacing;
+    // max-width: 780px;
+}
+
+
+
+.scope-text .perex,
+.perex {
+    @include perex;
+    line-height: 1.5;
+}
+
+.section__heading {
+    @include ff--body;
+    @include type-setting(2);
+    font-weight: bold;
+    font-style: normal;
+}
+
+// --------------------------
+// Base typographic styles
+// --------------------------
+
+// Define your base font-size here; most elements will inherit this.
+html {
+    @include ff--body;
+}
+
+// Common margin-bottom for vertical rhythm.
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+fieldset,
+p,
+table,
+pre,
+.baseline,
+svg text {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    font-weight: 400;
+
+    // @include respond-to(retina) {
+    //     font-weight: 300;
+    // }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    // font-weight: bold;
+    font-style: italic;
+}
+
+h1,
+.heading--alpha {
+    @include type-setting(3);
+    @include ff--heading;
+}
+
+h2,
+.heading--beta {
+    @include type-setting(2);
+}
+
+h3,
+.heading--gamma {
+    @include type-setting(1);
+}
+
+p {
+    @include type-setting(0);
+    letter-spacing: 0.4px;
+}
+
+input, form, textarea {
+    @include ff--body;
+}
+
+// --------------------------
+// Scope
+// --------------------------
+// - for user generated content (where adding classes would de difficult) we
+//   mark only container and then style headings with nesting
+.scope-text {
+    h2 {
+        margin-top: ($spacing * 3);
+        margin-bottom: $spacing;
+    }
+
+    h4 {
+        margin-bottom: ($spacing / 2);
+    }
+
+    a {
+        @include link-underline();
+    }
+
+    p {
+        @include type-setting(0);
+        margin-bottom: $base-line-height;
+    }
+
+    code {
+        @include type-setting(-1);
+        background: palette(primary, light);
+        border-radius: 3px;
+        padding: 4px 4px 2px;
+    }
+
+    pre {
+        @include type-setting(0);
+        background: palette(primary, x-dark);
+        color: white;
+        border-radius: 5px;
+        padding: ($spacing / 2) $spacing;
+        margin: 0 ($spacing / -1) $spacing;
+
+        code {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    blockquote {
+        color: palette(gray, dark);
+        font-style: italic;
+        @include type-setting(1);
+    }
+
+    ol {
+        line-height: 1.6;
+        margin-bottom: $base-line-height;
+        padding-left: 1rem;
+
+        @include respond-to(medium) {
+            padding-left: 0;
+        }
+
+        ol {
+            margin-bottom: ($base-line-height / 2);
+            padding-left: $base-line-height;
+        }
+    }
+
+    ul {
+        line-height: 1.6;
+        margin-bottom: $base-line-height;
+        list-style-type: none;
+        padding-left: 1rem;
+
+        @include respond-to(medium) {
+            padding-left: 0;
+        }
+
+        ul {
+            margin-bottom: ($base-line-height / 2);
+            padding-left: $base-line-height;
+        }
+
+        li {
+        position: relative;
+
+            &:before {
+                content: '';
+                background: palette(primary);
+                width: 6px;
+                height: 6px;
+                display: block;
+                position: absolute;
+                left: -18px;
+                top: 13px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+
+    // --------------------------
+    // Horizontal rule
+    // --------------------------
+    hr {
+        display: block;
+        clear: both;
+        margin: ($spacing * 1.5) ($spacing * -1.5);
+        border: 0;
+        height: 1px;
+        background: palette(gray, light);
+    }
+}

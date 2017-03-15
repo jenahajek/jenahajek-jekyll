@@ -1,0 +1,137 @@
+// Gutter in the grid should be 30px
+// we add 15px on both sides
+$grid-spacing: 15px;
+
+// ==========================
+// Grid System
+// ==========================
+// - 12 equal columns, with 15px padding gutters on each side (gutter is
+//   effectively 30px)
+// - row has also 15px padding, which makes gutter on the sides of the row
+//   also 30px
+// - there is also row modification `.row--extended`
+//   - it is moved 30px to the sides, in order to make more interesting layout
+//   - columns are slighty bigger, gutters remain the same
+
+// --------------------------
+// Wrapper
+// --------------------------
+// Content container, centered. One place to control width of the content
+// area.
+// We control negative space around the edges, especially on narrow viewports
+// with padding.
+.wrapper {
+    @include clearfix();
+    // max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    // padding:  0 ($spacing / 2);
+}
+
+
+// --------------------------
+// Row
+// --------------------------
+// Container, that clears floated columns inside.
+// Also added 15px padding on the sides. It complements columns and basic site
+// layout.
+
+// 1 align with .row--extended, on small screen there is no space nor does it
+//   look good to have this difference
+.row {
+    @include clearfix();
+    padding: 0 $grid-spacing;
+    margin-bottom: ($spacing / 2);
+
+    @include respond-to(small) {
+        margin: 0 (-1 * $grid-spacing); // 1
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// --------------------------
+// Columns
+// --------------------------
+// Common styling of every column.
+//
+// 1: in case you need absolute positioning of column's contents
+// 2: prevent collapsing and weird rendering failures
+.column,
+[class^="column-"],
+[class*=" column-"] {
+    position: relative; // 1
+    display: block;
+    width: 100%;
+    float: left;
+    min-height: 1px; // 2
+    padding-right: $grid-spacing;
+    padding-left: $grid-spacing;
+    margin-bottom: 0;
+}
+
+@mixin column {
+    position: relative; // 1
+    display: block;
+    width: 100%;
+    float: left;
+    min-height: 1px; // 2
+    padding-right: $grid-spacing;
+    padding-left: $grid-spacing;
+    margin-bottom: 0;
+}
+
+// --------------------------
+// Cycle for generating width. It loops twelve times, calculating proper width
+// per each column size.
+// --------------------------
+// It generates standard column class, and `--large` modification. You can use
+// that to choose column size based on large viewport.
+//
+// e.g.
+// "<div class="column-6--small column-4--medium column-3--large>" will take
+// half of the small screen, third on medium screen and quarter on large one.
+@for $i from 1 through 12 {
+    .column-#{$i} {
+        width: (100% / 12) * $i;
+    }
+
+    .column-#{$i}--large {
+        width: (100% / 12) * $i;
+    }
+}
+
+// --------------------------
+// Cycle for generating width for medium viewports.
+// --------------------------
+// It generates standard column class, and `--medium` modification. You can use
+// that modification to choose specific size on medium viewport.
+@include respond-to(medium) {
+    @for $i from 1 through 12 {
+        // .column-#{$i} {
+        //     width: (100% / 12) * $i;
+        // }
+        .column-#{$i}--medium {
+            width: (100% / 12) * $i;
+        }
+    }
+}
+
+// --------------------------
+// Cycle for generating width for small viewports.
+// --------------------------
+// Columns fill entire row, unless you choose `--small` modification. It
+// overrides default setting.
+@include respond-to(small) {
+    @for $i from 1 through 12 {
+        .column-#{$i} {
+            width: 100%;
+        }
+
+        .column-#{$i}--small {
+            width: (100% / 12) * $i;
+        }
+    }
+}
