@@ -1,0 +1,44 @@
+{
+  "name": "",
+  "author": "Jena Hajek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-webp": "2.3",
+    "imagemin-jpeg-recompress": "4.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "del": "^2.2.0",
+    "git-guppy": "^1.0.1",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-scss-lint": "^0.3.8",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "imagemin-pngquant": "^4.2.0",
+    "jshint": "^2.8.0",
+    "path": "^0.12.7",
+    "postcss-vertical-rhythm": "^1.1.5"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "pre-commit": []
+}
