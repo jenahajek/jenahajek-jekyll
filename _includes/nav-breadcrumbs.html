@@ -1,0 +1,16 @@
+{% assign crumbs = page.url | split: '/' %}
+
+<ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="/">Home</a>
+    </li>
+    {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+            <li class="breadcrumbs__item breadcrumbs__item--active">{{ crumb | replace:'-',' ' }}</li>
+        {% else %}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

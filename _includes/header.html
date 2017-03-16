@@ -1,11 +1,13 @@
+{% include nav-breadcrumbs.html %}
+
+{% comment %}
 <header class="site-header" role="banner">
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+    <a class="site-title" href="{{ "/" | relative_url}}">Home</a>
 
     <nav class="site-nav">
-
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
@@ -18,3 +20,4 @@
   </div>
 
 </header>
+{% endcomment %}
