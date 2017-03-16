@@ -3,13 +3,13 @@
 
 
 @mixin ff--heading {
-    font-family: "chaparral-pro-display", georgia, sans-serif;
-    font-style: italic;
-    font-weight: 300;
+    font-family: proxima-nova, "chaparral-pro-display", georgia, sans-serif;
+    // font-style: italic;
+    // font-weight: 300;
 }
 
 @mixin ff--body {
-    font-family: "chaparral-pro", georgia, sans-serif;
+    font-family: proxima-nova, "chaparral-pro", georgia, sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     @include respond-to(large) {
         line-height: 1.1;
         font-size: 6.5vw;
-        margin: ($base-line-height * 4) 0 ($base-line-height / 2);
+        margin: ($vr * 4) 0 ($vr / 2);
     }
 }
 
@@ -112,7 +112,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
 p {
     @include type-setting(0);
     letter-spacing: 0.4px;
@@ -127,6 +126,7 @@ input, form, textarea {
 // --------------------------
 // - for user generated content (where adding classes would de difficult) we
 //   mark only container and then style headings with nesting
+.article,
 .scope {
     h1 {
         // @include type-setting(3);
@@ -134,8 +134,8 @@ input, form, textarea {
 
     h2 {
         @include type-setting(2);
-        margin-top: ($spacing * 3);
-        margin-bottom: $spacing;
+        margin-top: ($vr * 3);
+        margin-bottom: $vr;
     }
 
     h3 {
@@ -143,7 +143,7 @@ input, form, textarea {
     }
 
     h4 {
-        margin-bottom: ($spacing / 2);
+        margin-bottom: ($vr / 2);
     }
 
     a {
@@ -152,7 +152,7 @@ input, form, textarea {
 
     p {
         @include type-setting(0);
-        margin-bottom: $base-line-height;
+        margin-bottom: $vr;
     }
 
     code {
@@ -167,8 +167,8 @@ input, form, textarea {
         background: palette(primary, x-dark);
         color: white;
         border-radius: 5px;
-        padding: ($spacing / 2) $spacing;
-        margin: 0 ($spacing / -1) $spacing;
+        padding: ($vr / 2) $vr;
+        margin: 0 ($vr / -1) $vr;
 
         code {
             background: none;
@@ -184,7 +184,7 @@ input, form, textarea {
 
     ol {
         line-height: 1.6;
-        margin-bottom: $base-line-height;
+        margin-bottom: $vr;
         padding-left: 1rem;
 
         @include respond-to(medium) {
@@ -192,14 +192,14 @@ input, form, textarea {
         }
 
         ol {
-            margin-bottom: ($base-line-height / 2);
-            padding-left: $base-line-height;
+            margin-bottom: ($vr / 2);
+            padding-left: $vr;
         }
     }
 
     ul {
         line-height: 1.6;
-        margin-bottom: $base-line-height;
+        margin-bottom: $vr;
         list-style-type: none;
         padding-left: 1rem;
 
@@ -208,8 +208,8 @@ input, form, textarea {
         }
 
         ul {
-            margin-bottom: ($base-line-height / 2);
-            padding-left: $base-line-height;
+            margin-bottom: ($vr / 2);
+            padding-left: $vr;
         }
 
         li {
@@ -236,7 +236,7 @@ input, form, textarea {
     hr {
         display: block;
         clear: both;
-        margin: ($spacing * 1.5) ($spacing * -1.5);
+        margin: ($vr * 1.5) ($vr * -1.5);
         border: 0;
         height: 1px;
         background: palette(gray, light);

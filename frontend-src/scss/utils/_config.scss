@@ -98,31 +98,34 @@ $link-color--focus: darken($link-color--hover, 10);
 // 
 // set vertical rhythm https://github.com/markgoodyear/postcss-vertical-rhythm/
 // it needs to be in body and have this syntax
+$vr: 30px;
+
 html,
 body {
-    font: 20px/1.5 serif;
+    font-size: 21px;
 }
+
 
 $type-settings: (
   -1: (
     font-size: 0.75rem,
-    line-height: 1vr
+    line-height: 1 * $vr
   ),
   0: (
     font-size: 1rem,
-    line-height: 1vr
+    line-height: 1 * $vr
   ),
   1: (
     font-size: 1.333rem,
-    line-height: 2vr
+    line-height: 2 * $vr
   ),
   2: (
     font-size: 1.778rem,
-    line-height: 2vr
+    line-height: 2 * $vr
   ),
   3: (
     font-size: 2.3686rem,
-    line-height: 3vr
+    line-height: 3 * $vr
   )
 
 );
@@ -147,10 +150,10 @@ $type-settings: (
 // --------------------------
 // Spacing
 // --------------------------
-$spacing: 1vr;
+$spacing: 1 * $vr;
 $max-width: 1400px;
 
-$base-line-height: 1vr;
+$base-line-height: 1* $vr;
 
 
 
