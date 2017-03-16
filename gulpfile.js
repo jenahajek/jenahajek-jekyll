@@ -99,7 +99,6 @@ gulp.task('sass', function() {
             return 'Problem file : ' + error.message;
         })))
         .pipe(sourcemaps.write())
-        .pipe(postcss([ require('postcss-vertical-rhythm')]))
         .pipe(gulp.dest(paths.dest))
         .pipe(browserSync.stream());
 });
@@ -123,7 +122,6 @@ gulp.task('sass-prod', function() {
         .pipe(sass().on('error', notify.onError(function (error) {
             return 'Problem file : ' + error.message;
         })))
-        .pipe(postcss([ require('postcss-vertical-rhythm')]))
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(cssnano({outputStyle: 'compressed'}))
         .pipe(gulp.dest(paths.dest))
