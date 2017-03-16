@@ -23,16 +23,6 @@ twitter_username: jenahajek
 github_username:  jenahajek
 permalink: /:title/
 
-collections:
-  books:
-    output: enable
-    defaults:
-      - scope:
-          path: ""
-          type: books
-        values:
-          layout: book
-
 # Build settings
 markdown: kramdown
 
