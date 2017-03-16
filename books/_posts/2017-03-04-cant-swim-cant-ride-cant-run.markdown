@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Can’t Swim, Can’t Ride, Can’t Run"
 date:   2017-03-04 11:49:47 +0800
 subtitle: From common man to ironman
 author: Andrew Holgate
 pages: 224
 imageName: cant-swim-cant-ride-cant-run.png
-categories:
-- sport
 tags:
+- sport
 - triatlon
 - anglicky
 ---

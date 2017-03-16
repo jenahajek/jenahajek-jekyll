@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Zbraně vlivu"
 date:   2016-12-09 11:49:47 +0800
 subtitle: Manipulativní techniky a jak se jim bránit
 author: Robert B. Cialdini
 pages: 332
 imageName: zbrane-vlivu.png
-categories:
-- psychologie
 tags:
+- psychologie
 - osobní rozvoj
 - česky
 ---

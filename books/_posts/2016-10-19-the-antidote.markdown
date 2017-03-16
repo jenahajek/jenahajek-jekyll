@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "The Antidote"
 date:   2016-10-19 11:49:47 +0800
 subtitle: Happiness for people who can’t stand positive thinking.
 author: Oliver Burkeman
 pages: 256
 imageName: the-antidote.png
-categories:
-- psychologie
 tags:
+- psychologie
 - anglicky
 - česky
 ---

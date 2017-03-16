@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Děti, které přežili Mengeleho"
 date:   2017-02-05 11:49:47 +0800
 subtitle: Zpověď dvojčat Evy a Miriam
 author: Eva Mozesová Korová
 pages: 225
 imageName: deti-ktere-prezily-mengeleho.png
-categories:
-- biografie
 tags:
+- biografie
 - česky
 - holocaust
 ---

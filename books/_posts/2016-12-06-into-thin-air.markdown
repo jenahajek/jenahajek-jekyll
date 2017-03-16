@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Into Thin Air"
 date:   2016-12-06 11:49:47 +0800
 subtitle: A personal account of the Everest dissaster
 author: Jon Krakauer
 pages: 304
 imageName: into-thin-air.png
-categories:
-- biografie
 tags:
+- biografie
 - horolezení
 - everest
 - tragédie

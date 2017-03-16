@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Little Princes"
 date:   2016-12-12 11:49:47 +0800
 subtitle: One man’s Promise to Bring Home the Lost Children of Nepal
 author: Connor Grennan
 pages: 320
 imageName: little-princes.png
-categories:
-- biografie
 tags:
+- biografie
 - anglicky
 - TOP
 ---

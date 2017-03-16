@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Quiet"
 date:   2016-10-19 11:49:47 +0800
 subtitle: The Power of Introverts in a World that Can’t Stop Talking
 author: Susan Cain
 pages: 352
 imageName: quiet.png
-categories:
-- psychologie
 tags:
+- psychologie
 - introverze
 - komunikace
 - anglicky

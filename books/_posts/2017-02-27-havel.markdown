@@ -1,13 +1,14 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Havel"
 date:   2017-02-27 14:49:47 +0800
 subtitle:
 author: Michael Žantovský
 pages: 613
-categories:
-- biography
 tags:
+- biography
 - politics
 - real story
 - history

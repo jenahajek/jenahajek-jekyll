@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Příběh lidského těla"
 date:   2017-01-05 11:49:47 +0800
 subtitle: Evoluce, zdraví, onemocnění
 author: Daniel Lieberman
 pages: 496
 imageName: pribeh-lidskeho-tela.png
-categories:
-- zdraví
 tags:
+- zdraví
 - evoluce
 - TOP
 - česky

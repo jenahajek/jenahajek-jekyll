@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Out of Mao’s Shadow"
 date:   2017-02-03 11:49:47 +0800
 subtitle: The Struggle for the Soul of a New China
 author: Philip P. Pan
 pages: 448
 imageName: out-of-maos-shadow.png
-categories:
-- politika
 tags:
+- politika
 - historie
 - Čína
 - anglicky

@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Disrupted"
 date:   2016-12-15 11:49:47 +0800
 subtitle: My Misadventure in the Start-Up Bubble
 author: Dan Lyons
 pages: 272
 imageName: disrupted.png
-categories:
-- biografie
 tags:
+- biografie
 - anglicky
 ---
 Vtipný příběh o temných stránkách startupů. Dan Lyons psal blog <a href="http://www.fakesteve.net/">fake Steve Jobs</a> a pracoval jako úspěšný novinář pro Forbes i Newsweek. V jeho 51 letech už nasbíral hodně zkušeností, což bylo znát i na výplatní pásce. Během snižování nákladů ho kvůli tomu dost nevybíravým způsobem vyhodili. Ten okamžik přišel (pochopitelně) v naprosto nevhodnou dobu.

@@ -1,14 +1,15 @@
 ---
 layout: book
+category: book
+permalink: /books/:title/
 title:  "Nenásilná komunikace"
 date:   2016-09-01 11:49:47 +0800
 subtitle: 
 author: Marshall Rosenberg
 pages:
 imageName: nenasilna-komunikace.png
-categories:
-- psychologie
 tags:
+- psychologie
 - komunikace
 - česky
 ---
