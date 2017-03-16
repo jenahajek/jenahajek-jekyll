@@ -1,0 +1,102 @@
+@include component((
+    'floatingImage': 67em,
+)) {
+    .article {
+        h1, h2, h3, h4, h5, h6,
+        p, ul, ol, dl, blockquote, figure,
+        table, pre {
+            @include center-content;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        blockquote {
+        border-left: 3px solid palette(gray, light);
+        padding-left: ($vr / 2);
+        position: relative;
+        right: ($vr / -2);
+
+            @include respond-to(medium) {
+                left: ($vr / -2);
+                right: auto;
+            }
+        }
+
+
+        .article__header {
+            margin-top: (1 * $vr);
+
+            @include respond-to(large) {
+                text-align: center;
+                margin: (2 * $vr);
+            }
+        }
+
+        .article__title {
+            @include huge-type;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            
+            @include respond-to(large) {
+                max-width: 1200px;
+            }
+        }
+
+        .article__subtitle {
+            @include type-setting(0);
+            font-style: italic;
+            margin-top: 0;
+            margin-bottom: (1 * $vr);
+        }
+
+        .article__book-author {
+            @include type-setting(0);
+            font-variant: small-caps;
+            margin-bottom: (0.5 * $vr);
+
+            @include respond-to(large) {
+                text-align: center;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: (1 * $vr);
+                height: 2px;
+                background: palette(gray, light);
+                margin: (0.5 * $vr) 0;
+
+                @include respond-to(large) {
+                    margin: 1 * $vr auto;
+                }
+            }
+        }
+
+        .article__date {
+            @include type-setting(-1);
+            margin-top: ($vr * 2);
+            padding-top: ($vr * 1);
+            border-top: 1px solid palette(gray, light);
+            text-align: center;
+        }
+
+        .article__book-thumbnail-wrapper {
+            margin-bottom: 0;
+        }
+
+        .article__book-thumbnail {
+            margin: 0 auto (1 * $vr);
+            width: 220px;
+            display: block;
+
+            @include respond-to(floatingImage) {
+                margin: 0 (1 * $vr) (1 * $vr) -110px;
+                float: left;
+            }
+        }
+    }
+}

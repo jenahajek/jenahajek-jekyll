@@ -1,0 +1,35 @@
+.breadcrumbs {
+    width: 100%;
+    border-bottom: 1px solid palette(gray, light);
+}
+
+.breadcrumbs__item {
+    display: inline-block;
+    list-style-type: none;
+    @include type-setting(-1);
+    text-transform: uppercase;
+    padding: ($vr / 2) 0;
+    
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.breadcrumbs__link {
+    position: relative;
+    padding-right: $vr;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        right: ($vr / 4);
+        top: 50%;
+        margin-top: -6px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 8px;
+        border-color: transparent transparent transparent palette(primary);
+        display: block;
+    }
+}
