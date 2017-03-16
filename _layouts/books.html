@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: /books/
+---
+
+
+<header class="l-sidebar">
+  <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
+  <h1 class="section__heading">{{ page.title }}</h1>
+  {{ content }}
+</header>
+
+
+<div class="l-main">
+  <ul class="post-thumbnail__list">
+    {% for book in site.books reversed %}
+    <li class="post-thumbnail">
+      <a href="{{ book.url | relative_url }}" class="post-thumbnail__image-wrapper">
+        <img class="post-thumbnail__image" src="{{ site.url }}/assets/{{book.imageName}}" alt="{{ book.title}} - cover">
+      </a>
+      <div class="post-thumbnail__content">
+        <h2 class="post-thumbnail__title">
+          <a class="book-list__link" href="{{ book.url | relative_url }}">{{ book.title | escape }}</a>
+        </h2>
+        <p class="post-thumbnail__author">{{ book.author }}</p>
+        <p class="post-thumbnail__text">
+          {{ book.excerpt | truncatewords: 80 | remove: '<p>' | remove: '</p>' }}
+        </p>
+        <a href="{{ book.url | relative_url }}" class="post-thumbnail__more-link">Číst dál</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
