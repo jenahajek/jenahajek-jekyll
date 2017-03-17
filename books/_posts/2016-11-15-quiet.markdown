@@ -12,7 +12,6 @@ tags:
 - psychologie
 - introverze
 - komunikace
-- anglicky
 - česky
 ---
 Jste tišší, přemýšlíte než něco vypustíte z pusy a rádi pracujete v klidu? Tyto a podobné vlastnosti jsou velmi potřebné, přesto však nejsou ve společnosti doceněnované.

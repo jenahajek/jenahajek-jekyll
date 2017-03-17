@@ -10,7 +10,6 @@ pages: 320
 imageName: little-princes.png
 tags:
 - biografie
-- anglicky
 - TOP
 ---
 Kniha o několika turbulentních letech Connora Grennana, které mu dramatickým způsobem ovlivnily život. Příběh se začíná psát, když mu je 29 let. Tehdy už má za sebou 8 let práce pro institut EastWest v Praze, slušný balík na kontě a rozhodne se vydat se cestu kolem světa. Když se zmíní kamarádům, že chce na pompézní cestě roztočit všechny úspory, většinou se setká s nepochopením a často slýchá slova jako “sobectví” nebo “krátkozrakost”. Aby tyto hlasy umlčel, impulzivně se rozhodne na začátek cesty zaředit 3 měsíce dobrovolničení. Z nabídky si pak vybere to, které zní co možná nejvíc altruisticky - pomáhání sirotkům. Navíc v Nepálu, jež se v té době zmítá na pokraji občanské války. Když vystoupí z letadla a z hrůzou si uvědomí, do jaké situace se dostal. Už ale nemůže couvnout.

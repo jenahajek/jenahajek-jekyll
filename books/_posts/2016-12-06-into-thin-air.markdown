@@ -13,7 +13,6 @@ tags:
 - horolezení
 - everest
 - tragédie
-- anglicky
 ---
 Tip na mou první knihu z vysokohorského prostředí jsem objevil docela náhodně v knize Quiet (jež se zaobírá introvezí). Byla to ale trefa - kniha byla tak dobrá, že částečně dostala přednost i před spaním a asi za 2 noci byla přečtená.
 

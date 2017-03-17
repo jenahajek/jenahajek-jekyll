@@ -10,7 +10,6 @@ pages: 256
 imageName: the-antidote.png
 tags:
 - psychologie
-- anglicky
 - česky
 ---
 Kromě titulu na obálce najdete i shrnutí od Guardianu, které zní: “A bracing detox for the self-help junkie”, čili <em>Osvěžující detox pro feťáky osobního rozvoje</em>. Burkeman v knize tvrdí, že ke štěstí a spokojenosti vede jiná cesta, než v  zběsilé honbě za lepší budoucností, neustálé vizualizaci úspěchů nebo dalších postupech, které hlásájí autoři self-help literatury. Pokud se totiž snažíte dosáhnout dokonalého výsledku, nejspíš se vám to nepovede a budete rozladění, přestože samotný výkon může být vynikající. Jako když hokejový tým vyhraje stříbro.

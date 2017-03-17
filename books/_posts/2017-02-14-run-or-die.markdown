@@ -9,7 +9,6 @@ author: Kilian Jornet
 tags:
 - sport
 - ultrarunning
-- anglicky
 pages: 208
 imageName: run-or-die.png
 ---

@@ -13,7 +13,6 @@ tags:
 - adventure racing
 - osobní rozvoj
 - zdraví
-- anglicky
 ---
 Tuhle knihu jsem si prvně, ještě jakou žhavou novinku, stáhl na <a href="http://www.audible.com/" target="_blank">audible</a> jako audioknížku. Popisek sliboval propojení pár oblastí, které jsou mi blízké - vytrvalost, sport a principy. A kniha nezklamala.
 

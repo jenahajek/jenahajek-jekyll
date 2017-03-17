@@ -12,7 +12,6 @@ tags:
 - politika
 - historie
 - Čína
-- anglicky
 ---
 Philip P. Pan vystudoval v Beijingu mandarínskou čínštinu a další roky působil jako přední zahraniční korespondent pro americké deníky. Během sedmi strávených let se dostal na bezpočet míst, i tam, kam si ostatní moc netroufali a udělal mnoho rozhovorů s nejrůznějšími lidmi. Na téměř 450 stranách výmluvně sepsal to nejzajímavější a čtenáři tak představuje situaci v největším autoritářském systému na světě.
 
