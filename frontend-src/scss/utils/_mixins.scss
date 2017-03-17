@@ -74,35 +74,26 @@
 // --------------------------
 // http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 @mixin media-object {
-    overflow: hidden;
-    _overflow: visible;
-    zoom: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
 @mixin media-object__body {
-    overflow: hidden;
-    _overflow: visible;
-    zoom: 1;
+    flex: 1;
 }
 
 @mixin media-object__side {
-    float: left;
     margin-right: $spacing;
-
-    img {
-        display: block;
-    }
 }
 
-@mixin media-object__right-side {
-    float: right;
-    margin-left: $spacing;
+// @mixin media-object__right-side {
+//     float: right;
+//     margin-left: $spacing;
 
-    img {
-        display: block;
-    }
-}
-
+//     img {
+//         display: block;
+//     }
+// }
 
 @mixin flag {
     display: table;
@@ -190,9 +181,9 @@
 
 // Set max-width and center the content on screen
 @mixin center-content($mw: 780) {
-        max-width: ($mw * 1px);
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 ($base-line-height / 2);
+    max-width: ($mw * 1px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 ($vr);
 }
