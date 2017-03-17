@@ -1,19 +1,40 @@
 ---
 layout: default
-title: blog1
+# navigation_weight: 1
+title: Front-end blog
 category: frontend
+about: <p>Nifty CSS tricks are usually really cool, but I personally am intrigued more by architecture – organizing, building and structuring the code. I don't want to make just good looking products. I want them to be well-built and prepared to withstand anything.</p>
 ---
 
-<h1>custom frontend index</h1>
-
-{% for post in site.posts%}      
-  {% if post.categories contains 'frontend' %}
-  <div class="post">
-    <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="meta">Date: {{ post.date }}</p>
-    <div class="entry">
-      {{ post.content | strip_html | truncatewords: 100 }}
-    </div>
+<header class="l-sidebar">
+  <div class="l-sidebar__content">
+    <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
+    <h1 class="section__heading">{{ page.title }}</h1>
+    <p>Nifty CSS tricks are usually really cool, but I personally am intrigued more by architecture – organizing, building and structuring the code. I don't want to make just good looking products. I want them to be well-built and prepared to withstand anything.</p>
   </div>
-  {% endif %}
-{% endfor %}
+</header>
+
+
+<div class="l-main">
+  <ul class="post-thumbnail__list">
+    {% for post in site.posts%}      
+      {% if post.categories contains 'frontend' %}
+    <li class="post-thumbnail">
+      <div class="post-thumbnail__inner">
+        <div class="post">
+          <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="meta">Date: {{ post.date }}</p>
+          <div class="entry">
+            {{ post.content | strip_html | truncatewords: 100 }}
+          </div>
+        </div>
+      </div>
+    </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+
+
+

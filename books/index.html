@@ -1,54 +1,30 @@
 ---
-layout: default
+layout: index
+navigation_weight: 3
 title: Čtenářský deník
----
-
-{% comment %}
-
-{% for post in site.posts reversed %}
+about: <p>Knihy, jakožto ideální prostředek pro sdílení znalostí, hodně a pozitivně ovlivňují můj život. Jak profesní, tak osobní. Chtěl bych proto krátce zmínit ty, které stojí za investovaní času i peněz.</p>
+avatar: avatar.jpg
+---  
+<ul class="post-thumbnail__list">
+  {% for post in site.posts %}      
   {% if post.categories contains 'book' %}
-  <div class="post">
-    <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="meta">Date: {{ post.date }}</p>
-    <div class="entry">
-      {{ post.content | strip_html | truncatewords: 100 }}
-    </div>
-  </div>
-  {% endif %}
-{% endfor %}
-
-{% endcomment %}
-
-
-
-
-<header class="l-sidebar">
-  <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
-  <h1 class="section__heading">{{ page.title }}</h1>
-  Knihy, jakožto ideální prostředek pro sdílení znalostí, hodně a pozitivně ovlivňují můj život. Jak profesní, tak osobní. Chtěl bych proto krátce zmínit ty, které stojí za investovaní času i peněz.
-</header>
-
-
-<div class="l-main">
-  <ul class="post-thumbnail__list">
-    {% for post in site.posts %}      
-    {% if post.categories contains 'book' %}
-    <li class="post-thumbnail">
+  <li class="post-thumbnail">
+    <div class="post-thumbnail__inner">
       <a href="{{ post.url | relative_url }}" class="post-thumbnail__image-wrapper">
         <img class="post-thumbnail__image" src="{{ site.url }}/books/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
       </a>
       <div class="post-thumbnail__content">
+        <p class="post-thumbnail__author">{{ post.author }}</p>
         <h2 class="post-thumbnail__title">
           <a class="book-list__link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
-        <p class="post-thumbnail__author">{{ post.author }}</p>
         <p class="post-thumbnail__text">
           {{ post.excerpt | truncatewords: 80 | remove: '<p>' | remove: '</p>' }}
         </p>
-        <a href="{{ book.url | relative_url }}" class="post-thumbnail__more-link">Číst dál</a>
+        <a href="{{ post.url | relative_url }}" class="post-thumbnail__more-link">Číst dál</a>
       </div>
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<header class="l-sidebar">
+    <div class="l-sidebar__content">
+      <img src="{{site.url}}/assets/{{ page.avatar }}" alt="" class="avatar">
+      <h1 class="section__heading">{{ page.title }}{{ page.hometitle }}</h1>
+      {{ page.about }}
+  </div>
+</header>
+
+
+<div class="l-main {{ page.class }}">
+    {{ content }}
+</div>
