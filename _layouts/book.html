@@ -20,10 +20,11 @@ layout: default
   </header>
 
   <div>
-    <p class="article__book-thumbnail-wrapper">
-      <img class="article__book-thumbnail" src="{{ site.url }}/books/assets/{{page.imageName}}" alt="{{ page.title}} - cover">
-    </p>
-    {{ content }}
+    <span class="article__content">
+      {{ page.excerpt }}
+      {% include book-image.html %}
+      {{ content }}
+    </span>
   </div>
 
   <p class="article__date">
