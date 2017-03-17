@@ -68,8 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 // --------------------------
 @mixin huge-type {
     @include ff--heading;
-    line-height: 1.1;
     @include type-setting(3);
+    line-height: 1.1;
     // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 
     @include respond-to(large) {
