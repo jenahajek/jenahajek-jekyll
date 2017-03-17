@@ -1,0 +1,31 @@
+.l-sidebar {
+    padding: $vr;
+    text-align: center;
+    border-bottom: 1px solid palette(gray, light);
+    
+    @include respond-to(large) {
+        text-align: left;
+        width: 30%;
+        float: left;
+        border-bottom: 0;
+    }
+}
+
+.l-sidebar__content {
+    max-width: ($vr * 25);
+    margin: 0 auto;
+    
+    @include respond-to(large) {
+        margin-left: $vr;
+        max-width: ($vr * 15);
+    }
+}
+
+.l-main {
+    @include respond-to(large) {
+        border-left: 1px solid palette(gray, light);
+        width: 70%;
+        float: left;
+        // padding-left: 2 * $vr;
+    }
+}

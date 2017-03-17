@@ -2,23 +2,6 @@
 // we add 15px on both sides
 $grid-spacing: 15px;
 
-.l-sidebar {
-    @include respond-to(medium) {
-        width: 30%;
-        float: left;
-        padding: $vr;
-    }
-}
-
-.l-main {
-    @include respond-to(medium) {
-        border-left: 1px solid palette(gray, light);
-        width: 70%;
-        float: left;
-        // padding-left: 2 * $vr;
-    }
-}
-
 // ==========================
 // Grid System
 // ==========================
