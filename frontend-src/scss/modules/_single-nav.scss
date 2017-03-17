@@ -29,9 +29,11 @@
 
 .single-nav__item--next {
     float: right;
+    border-top: 1px solid palette(gray, light);
     
     @include respond-to(medium) {
         text-align: right;
+        border-top: none;
     }
 }
 

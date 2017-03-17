@@ -1,4 +1,5 @@
 @include component((
+    'small': 32.5em,
     'floatingImage': 67em,
 )) {
     .article {
@@ -9,18 +10,31 @@
         }
 
         p {
-            text-align: justify;
+
+            @include respond-to(medium) {
+                text-align: justify;
+            }
         }
 
         blockquote {
+        position: relative;
         border-left: 3px solid palette(gray, light);
         padding-left: ($vr / 2);
-        position: relative;
         right: ($vr / -2);
 
             @include respond-to(medium) {
                 left: ($vr / -2);
                 right: auto;
+                padding-right: 0;
+            }
+        
+            p {
+                padding: 0;
+                padding-right: ($vr / 2);
+                
+                @include respond-to(medium) {
+                    padding-left: $vr;
+                }
             }
         }
 
@@ -86,16 +100,47 @@
 
         .article__book-thumbnail-wrapper {
             margin-bottom: 0;
+            
+            @include respond-to(small) {
+                float: right;
+                width: auto;
+            }
+
+            @include respond-to(floatingImage) {
+                float: none;
+                margin-right: auto;
+            }
         }
 
         .article__book-thumbnail {
-            margin: 0 auto (1 * $vr);
             width: 220px;
             display: block;
+            margin: 0 0 (1 * $vr);
+            
+            @include respond-to(small) {
+                float: right;
+                display: inline;
+                margin-bottom: ($vr / 2);
+            }
 
             @include respond-to(floatingImage) {
-                margin: 0 (1 * $vr) (1 * $vr) -110px;
+                margin: 0 -110px ($vr / 2) $vr;
+                float: right;
+                display: block;
+            }
+        }
+
+        .article__content {
+
+            > p:first-child:first-letter {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 5.3125rem;
+                line-height: 3rem;
                 float: left;
+                padding-top: 15px;
+                padding-right: 10px;
+                margin-left: -5px;
             }
         }
     }

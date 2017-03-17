@@ -1,6 +1,11 @@
 .breadcrumbs {
     width: 100%;
+    padding-left: $vr;
     border-bottom: 1px solid palette(gray, light);
+    
+    @include respond-to(medium) {
+        padding-left: ($vr * 2);
+    }
 }
 
 .breadcrumbs__item {

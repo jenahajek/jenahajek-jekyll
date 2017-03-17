@@ -6,3 +6,16 @@
 // - it should be refactored someday later
 // - it lives here so it won't get forgotten
 // - if there is nothing in this file, well done champs! :)
+
+.l-sidebar__content {
+
+    a {
+        @include link-underline;
+    }
+}
+
+.temporary.l-main {
+    @include respond-to(large) {
+        border-left: none;
+    }
+}
