@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+_blog-posts-ideas.md
+_backlog.md
