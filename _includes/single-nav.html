@@ -32,6 +32,7 @@
   };
   </script>
 
+{% if prev_post or next_post %}
   <div class="single-nav">
   {% if prev_post %}
     <a href="{{prev_post_url}}" class="single-nav__item single-nav__item--prev">
@@ -46,3 +47,4 @@
     </a>
   {% endif %}
   </div>
+{% endif %}
