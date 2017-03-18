@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Nenásilná komunikace"
 date:   2016-09-01 11:49:47 +0800

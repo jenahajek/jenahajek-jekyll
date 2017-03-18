@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Zbraně vlivu"
 date:   2016-12-09 11:49:47 +0800
@@ -10,7 +11,6 @@ pages: 332
 imageName: zbrane-vlivu.png
 tags:
 - psychologie
-- osobní rozvoj
 - česky
 ---
 Téhle knize jsou dlouho odolával, ani nevím proč. Nakonec jsem se odhodlal a vůbec toho nelituju. Peníze i čas strávený četbou nebyly špatnou investicí.

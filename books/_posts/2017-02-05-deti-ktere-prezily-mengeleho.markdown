@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Děti, které přežili Mengeleho"
 date:   2017-02-05 11:49:47 +0800
@@ -11,7 +12,7 @@ imageName: deti-ktere-prezily-mengeleho.png
 tags:
 - biografie
 - česky
-- holocaust
+- historie
 ---
 Drásavý příběh židovských dvojčat, jejichž idylické dětství v Rumunské vesničce přerval Hitlerův nástup k moci.
 

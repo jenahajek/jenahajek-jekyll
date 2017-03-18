@@ -1,16 +1,17 @@
 ---
 layout: book
-category: book
+categories:
+- book
 permalink: /books/:title/
 title:  "Run or Die"
 date:   2017-02-15 08:49:47 +0800
 subtitle: The Inspirational Memoir of the World's Greatest Ultra-Runner
 author: Kilian Jornet
+pages: 208
+imageName: run-or-die.png
 tags:
 - sport
 - ultrarunning
-pages: 208
-imageName: run-or-die.png
 ---
 Vzpomínky, životní příběhy a přemítání o životě z pera jednoho z nejvýraznějších ultra běžců (tj. těch, kteří zdolávají distance delší než maraton) vůbec. Kilian je mladý Španěl, kterého už od mala rodiče vedli k přírodě a sportu. Ten tomu úplně propadl a postupně se dopracoval na úrověň světové špičky.
 

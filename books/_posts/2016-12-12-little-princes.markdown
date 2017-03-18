@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Little Princes"
 date:   2016-12-12 11:49:47 +0800

@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Out of Mao’s Shadow"
 date:   2017-02-03 11:49:47 +0800

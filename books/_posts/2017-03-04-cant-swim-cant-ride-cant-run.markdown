@@ -1,6 +1,8 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
+- biografie
 permalink: /books/:title/
 title:  "Can’t Swim, Can’t Ride, Can’t Run"
 date:   2017-03-04 11:49:47 +0800

@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "The Ultra Mindset"
 date:   2016-09-01 11:49:47 +0800
@@ -11,7 +12,6 @@ imageName: the-ultra-mindset.png
 tags:
 - sport
 - adventure racing
-- osobní rozvoj
 - zdraví
 ---
 Tuhle knihu jsem si prvně, ještě jakou žhavou novinku, stáhl na <a href="http://www.audible.com/" target="_blank">audible</a> jako audioknížku. Popisek sliboval propojení pár oblastí, které jsou mi blízké - vytrvalost, sport a principy. A kniha nezklamala.

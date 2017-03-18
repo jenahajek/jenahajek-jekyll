@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Into Thin Air"
 date:   2016-12-06 11:49:47 +0800
@@ -11,8 +12,7 @@ imageName: into-thin-air.png
 tags:
 - biografie
 - horolezení
-- everest
-- tragédie
+- sport
 ---
 Tip na mou první knihu z vysokohorského prostředí jsem objevil docela náhodně v knize Quiet (jež se zaobírá introvezí). Byla to ale trefa - kniha byla tak dobrá, že částečně dostala přednost i před spaním a asi za 2 noci byla přečtená.
 

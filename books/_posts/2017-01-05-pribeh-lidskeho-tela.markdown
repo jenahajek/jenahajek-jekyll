@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "Příběh lidského těla"
 date:   2017-01-05 11:49:47 +0800
@@ -10,7 +11,6 @@ pages: 496
 imageName: pribeh-lidskeho-tela.png
 tags:
 - zdraví
-- evoluce
 - TOP
 - česky
 ---

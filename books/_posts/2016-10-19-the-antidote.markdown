@@ -1,6 +1,7 @@
 ---
 layout: book
-category: book
+categories:
+- cat-book
 permalink: /books/:title/
 title:  "The Antidote"
 date:   2016-10-19 11:49:47 +0800
