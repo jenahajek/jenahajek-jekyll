@@ -1,39 +1,38 @@
 .main-nav {
     padding-left: 0;
     @include respond-to(large) {        // temporary
-        margin-top: ($vr * 8.2);          // temporary
+        margin-top: ($vr * 0);          // temporary
     }                                   // temporary
+}
+
+.main-nav__category {
+    @include type-setting(-1);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: palette(gray);
+    padding: ($vr * 1.5) $vr ($vr / 2);
+    border-bottom: 1px solid palette(gray, light); // temp
 }
 
 .main-nav__item {
     list-style-type: none;
     
+    @include respond-to(large) {
+        border-bottom: 1px solid palette(gray, light); // temp
+    }
+    
     + .main-nav__item {
-        border-top: 1px solid palette(gray, light);
+        border-bottom: 1px solid palette(gray, light);
     }
 }
 
 .main-nav__link {
-    @include transition();
+    @include nav-link;
     display: flex;
     flex-direction: column;
-    color: palette(black);
-    position: relative;
     
     @include respond-to(medium) {
         flex-direction: row;
-    }
-
-    &:hover,
-    &:focus {
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            height: 100%;
-            width: 5px;
-            background: palette(primary);
-        }
     }
 }
 

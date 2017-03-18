@@ -187,3 +187,24 @@
     margin-right: auto;
     padding: 0 ($vr);
 }
+
+@mixin nav-link {
+    @include transition();
+    color: palette(black);
+    position: relative;
+    
+    &:hover,
+    &:focus {
+        background: palette(primary, x-light);
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 5px;
+            background: palette(primary);
+            top: 0;
+            left: 0;
+        }
+    }
+}

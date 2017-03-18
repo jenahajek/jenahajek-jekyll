@@ -9,13 +9,7 @@
 
 .l-sidebar__content {
 
-    a {
+    > a {
         @include link-underline;
-    }
-}
-
-.temporary.l-main {
-    @include respond-to(large) {
-        border-left: none;
     }
 }

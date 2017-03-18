@@ -16,7 +16,7 @@
 .single-nav__item {
     width: 100%;
     float: left;
-    padding-top: ($vr / 2);
+    padding: ($vr / 2) ($vr / 2) 0;
 
     @include respond-to(medium) {
         width: 50%;

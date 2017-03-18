@@ -9,9 +9,9 @@
 }
 
 .breadcrumbs__item {
+    @include type-setting(-1);
     display: inline-block;
     list-style-type: none;
-    @include type-setting(-1);
     text-transform: uppercase;
     padding: ($vr / 2) 0;
     

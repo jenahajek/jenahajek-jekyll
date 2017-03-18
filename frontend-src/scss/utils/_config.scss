@@ -24,6 +24,7 @@ $tweakpoints: ();
 
 
 $primary-color: #49b3f5;
+$primary-color--x-light: lighten($primary-color, 36.8%);
 $primary-color--light: lighten($primary-color, 27%);
 $primary-color--dark: darken($primary-color, 30%);
 $primary-color--x-dark: darken($primary-color, 50%);
@@ -41,6 +42,7 @@ $primary-color--x-dark: darken($primary-color, 50%);
 // http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 $palettes: (
     primary: (
+        x-light: $primary-color--x-light,
         light: $primary-color--light,
         base:  $primary-color,
         dark: $primary-color--dark,

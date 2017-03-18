@@ -29,8 +29,16 @@
 }
 
 .post-thumbnail__image-wrapper {
+    @include transition();
+    @include transition-property(transform);
     @include media-object__side;
     margin-bottom: ($vr / 2);
+    min-width: 220px; // if image is not available, use the space anyway. Otherwise it would break alignment.
+    
+    &:hover,
+    &:focus {
+        transform: rotate(1deg) scale(1.02);
+    }
     
     @include respond-to(medium) {
         position: relative;
@@ -58,7 +66,14 @@
     text-transform: uppercase;
     
     a {
+        @include transition();
+        @include transition-property(color);
         color: palette(black);
+
+        &:hover,
+        &:focus {
+            color: $link-color--hover;
+        }
     }
 }
 
@@ -72,6 +87,10 @@
 
 .post-thumbnail__text {
     margin-bottom: $vr;
+    
+    @include respond-to(medium) {
+        text-align: justify;
+    }
     
     a {
         @include link-underline;

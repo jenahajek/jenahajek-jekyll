@@ -7,6 +7,9 @@
 body {
     background: #fff;
     // overflow-x: hidden; // opera had scroll bar because of negative margins on row--extended
+    display: flex;              // sticky footer with flexbox
+    min-height: 100vh;          // sticky footer with flexbox
+    flex-direction: column;     // sticky footer with flexbox
 }
 
 // --------------------------
