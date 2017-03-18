@@ -2,9 +2,17 @@
 layout: default
 ---
 
+{% comment %}
+  toto se hodne kreje s _layout/tag.html a _layout/tags.html, bylo by fajn to modularizovat
+{% endcomment %}
+
 <header class="l-sidebar">
     <div class="l-sidebar__content">
-      <img src="{{site.url}}/assets/{{ page.avatar }}" alt="" class="avatar">
+        {% if page.avatar %}
+          <img src="{{site.url}}/assets/{{ page.avatar }}" alt="" class="avatar">
+        {% else if %}
+          <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
+        {% endif %}
       <h1 class="section__heading">{{ page.title }}{{ page.hometitle }}</h1>
       {{ page.about }}
   </div>

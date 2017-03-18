@@ -1,17 +1,20 @@
 ---
 layout: index
 navigation_weight: 3
+hr: horizonal-rule
 title: Čtenářský deník
 about: <p>Knihy, jakožto ideální prostředek pro sdílení znalostí, hodně a pozitivně ovlivňují můj život. Jak profesní, tak osobní. Chtěl bych proto krátce zmínit ty, které stojí za investovaní času i peněz.</p>
 avatar: avatar.jpg
 ---  
 <ul class="post-thumbnail__list">
   {% for post in site.posts %}      
-  {% if post.categories contains 'book' %}
+  {% if post.categories contains 'cat-book' %}
   <li class="post-thumbnail">
     <div class="post-thumbnail__inner">
       <a href="{{ post.url | relative_url }}" class="post-thumbnail__image-wrapper">
+      {% if post.imageName %}
         <img class="post-thumbnail__image" src="{{ site.url }}/books/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
+      {% endif %}
       </a>
       <div class="post-thumbnail__content">
         <p class="post-thumbnail__author">{{ post.author }}</p>
