@@ -35,3 +35,4 @@ exclude:
   - package.json
   - node_modules
   - frontend-src
+  - readme.md
