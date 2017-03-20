@@ -7,7 +7,6 @@ layout: default
 {% endcomment %}
 
 <div class="l-wrapper">
-
   <header class="l-sidebar">
       <div class="l-sidebar__content">
       {% if page.avatar %}
@@ -23,20 +22,19 @@ layout: default
     </div>
   </header>
 
-
   <div class="l-main {{ page.class }}">
-
   {% unless page.content == '' %}
     <p>{{ page.content }}</p>
   {% endunless %}
 
-  {% unless site.tags.[page.tag] | size > 0 %}
+  {% unless site.tags[page.tag] %}
     <p>Tenhle štítek je asi nějaký vadný. Nic relevantního nemůžu nabídnout. :/</p>
-    <p>Za informaci budu vděčný.</p>
+    <p>Za upozornění budu vděčný.</p>
   {% endunless %}
 
   <ul class="post-thumbnail__list">
-  {% assign list = site.tags.[page.tag] | where: "categories", page.category %}
+  {% assign tags = site.tags[page.tag] %}
+  {% assign list = tags | where: "categories", page.category %}
     {% for post in list %}
       <li class="post-thumbnail">
         {% if post.imageName %}
