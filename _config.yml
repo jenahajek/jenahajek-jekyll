@@ -26,6 +26,56 @@ permalink: /:title/
 # Build settings
 markdown: kramdown
 
+defaults:
+  -
+    scope:
+      path: "knihy"
+    values:
+      category: "cat-book"
+  -
+    scope:
+      path: "knihy/_posts"
+    values:
+      layout: "book" # overrides previous default layout
+      permalink: /knihy/:title/
+  -
+    scope:
+      path: "knihy/tagy"
+    values:
+      layout: "tag" # overrides previous default layout
+  -
+    scope:
+      path: "frontend"
+    values:
+      category: "cat-frontend"
+  -
+    scope:
+      path: "frontend/_posts"
+    values:
+      layout: "book" # overrides previous default layout
+      permalink: /frontend/:title/
+  -
+    scope:
+      path: "frontend/tagy"
+    values:
+      layout: "tag" # overrides previous default layout
+  -
+    scope:
+      path: "notes"
+    values:
+      category: "cat-note"
+  -
+    scope:
+      path: "notes/_posts"
+    values:
+      layout: "book" # overrides previous default layout
+      permalink: /notes/:title/
+  -
+    scope:
+      path: "notes/tagy"
+    values:
+      layout: "tag" # overrides previous default layout
+
 gems:
   - jekyll-feed
 exclude:
