@@ -1,0 +1,88 @@
+.tag-list {
+    @include center-content;
+    margin: $vr auto;
+    padding: 0;
+}
+
+.tag-list--aligned {
+    padding: 0 ($vr / 2);
+}
+
+.tag-list__item {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.tag-list__tag {
+    @include transition();
+    @include type-setting(-1);
+    text-transform: uppercase;
+    padding: ($vr / 8) ($vr / 2);
+    margin-right: ($vr / 4);
+    margin-bottom: ($vr / 2);
+    border: 1px solid palette(gray, light);
+    color: palette(gray);
+    border-radius: 3px;
+    display: inline-block;
+    
+    &:hover,
+    &:focus {
+        border-color: $link-color--hover;
+        background-color: $link-color--hover;
+        color: $white;
+    }
+}
+
+.tag-list__tag--strong {
+    color: palette(gray, dark);
+    border-color: palette(gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
