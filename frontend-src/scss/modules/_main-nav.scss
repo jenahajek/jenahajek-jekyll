@@ -46,12 +46,7 @@
     @include respond-to(medium) {
 
         &::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 0 5px 8px;
-            border-color: transparent transparent transparent palette(primary);
+            @include arrow;
             display: inline-block;
             position: relative;
             left: $vr;
