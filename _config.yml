@@ -26,6 +26,10 @@ permalink: /:title/
 # Build settings
 markdown: kramdown
 
+book-slug: knihy
+frontend-slug: frontend
+notes-slug: notes
+
 defaults:
   -
     scope:

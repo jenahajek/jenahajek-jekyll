@@ -50,7 +50,7 @@ layout: default
           {% assign slug = 'notes' %}
         {% endif %}
         <li class="tag-list__item">
-          <a href="/{{ slug }}/tagy/{{ tag }}"><h4 class="tag-list__tag">{{ tag }}</h4></a>
+          <a href="/{{ slug }}/tagy/{{ tag  | replace: ' ', '-'  | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c'  | replace: 'ý', 'y' }}"><h4 class="tag-list__tag">{{ tag }}</h4></a>
         </li>
       {% endfor %}
     </ul>

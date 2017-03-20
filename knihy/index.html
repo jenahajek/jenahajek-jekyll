@@ -13,7 +13,7 @@ avatar: avatar.jpg
     {% if post.imageName %}
       <div class="post-thumbnail__inner post-thumbnail__inner--align-right">
         <a href="{{ post.url | relative_url }}" class="post-thumbnail__image-wrapper">
-          <img class="post-thumbnail__image" src="{{ site.url }}/knihy/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
+          <img class="post-thumbnail__image" src="{{ site.url }}/{{ site.book-slug }}/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
         </a>
     {% else %}
       <div class="post-thumbnail__inner">
