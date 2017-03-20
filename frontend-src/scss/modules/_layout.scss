@@ -1,3 +1,17 @@
+.l-wrapper {
+    display: flex;
+    min-height: 85vh;
+    flex-direction: column;
+    
+    @include respond-to(large) {
+        flex-direction: row;
+    }
+}
+
+.l-wrapper--one-column {
+    flex-direction: column;
+}
+
 .l-sidebar {
     padding: $vr;
     text-align: center;
