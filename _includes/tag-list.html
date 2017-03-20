@@ -1,0 +1,28 @@
+{% comment %} seznam tagu {% endcomment %}
+
+{% if site.tags %}
+    <ul class="tag-list">
+      {% assign sorted_tags = site.tags | sort %}
+          {% for tag in sorted_tags %}
+            {% assign t = tag[1] | where: "categories", page.category %}
+            {% if t != empty %}
+            
+            {% if page.category == 'cat-book' %}
+              {% assign slug = 'knihy' %}
+            {% endif %}
+
+            {% if page.category == 'cat-frontend' %}
+              {% assign slug = 'frontend' %}
+            {% endif %}
+
+            {% if page.category == 'cat-note' %}
+              {% assign slug = 'notes' %}
+            {% endif %}
+
+                <li class="tag-list__item" id="{{ p.title }}-item">
+                  <a class="tag-list__tag tag-list__tag--strong" href="{{ site.url }}/{{ slug }}/tagy/{{ tag[0]  | replace: ' ', '-'  | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c' }}">{{ tag[0]}}</a>
+                </li>
+            {% endif %}
+          {% endfor %}
+    </ul>
+{% endif %}

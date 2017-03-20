@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% comment %}
+  toto se hodne kreje s _layout/index.html a _layout/tag.html, bylo by fajn to modularizovat
+{% endcomment %}
+
+<div class="l-wrapper">
+  <header class="l-sidebar">
+      <div class="l-sidebar__content">
+      {% if page.avatar %}
+        <img src="{{site.url}}/assets/{{ page.avatar }}" alt="" class="avatar">
+      {% else if %}
+        <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
+      {% endif %}
+        <h1 class="section__heading">{{ page.title }}</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+        {% include tag-list.html %}
+    </div>
+  </header>
+
+  <div class="l-main {{ page.class }}">
+    {% unless page.content == '' %}
+      <p>{{ page.content }}</p>
+    {% endunless %}
+
+    
+  </div>
+</div>

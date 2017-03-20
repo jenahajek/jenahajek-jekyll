@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+{% comment %}
+  toto se hodne kreje s _layout/index.html a _layout/tags.html, bylo by fajn to modularizovat
+{% endcomment %}
+
+<div class="l-wrapper">
+
+  <header class="l-sidebar">
+      <div class="l-sidebar__content">
+      {% if page.avatar %}
+        <img src="{{site.url}}/assets/{{ page.avatar }}" alt="" class="avatar">
+      {% else if %}
+        <img src="{{site.url}}/assets/avatar.jpg" alt="" class="avatar">
+      {% endif %}
+        <h1 class="section__heading">Štítek: {{ page.title }}</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% endif %}
+        {% include tag-list.html %}
+    </div>
+  </header>
+
+
+  <div class="l-main {{ page.class }}">
+
+  {% unless page.content == '' %}
+    <p>{{ page.content }}</p>
+  {% endunless %}
+
+  {% unless site.tags.[page.tag] | size > 0 %}
+    <p>Tenhle štítek je asi nějaký vadný. Nic relevantního nemůžu nabídnout. :/</p>
+    <p>Za informaci budu vděčný.</p>
+  {% endunless %}
+
+  <ul class="post-thumbnail__list">
+  {% assign list = site.tags.[page.tag] | where: "categories", page.category %}
+    {% for post in list %}
+      <li class="post-thumbnail">
+        {% if post.imageName %}
+          <div class="post-thumbnail__inner post-thumbnail__inner--align-right">
+            <a href="{{ post.url | relative_url }}" class="post-thumbnail__image-wrapper">
+              <img class="post-thumbnail__image" src="{{ site.url }}/knihy/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
+            </a>
+        {% else %}
+          <div class="post-thumbnail__inner">
+        {% endif %}
+          <div class="post-thumbnail__content">
+            <p class="post-thumbnail__author">{{ post.author }}</p>
+            <h2 class="post-thumbnail__title">
+              <a class="book-list__link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+            <p class="post-thumbnail__text">
+              {{ post.excerpt | truncatewords: 80 | remove: '<p>' | remove: '</p>' }}
+            </p>
+            <a href="{{ post.url | relative_url }}" class="post-thumbnail__more-link">Číst dál</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  </div>
+</div>
