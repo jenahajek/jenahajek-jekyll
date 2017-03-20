@@ -22,6 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: jenahajek
 github_username:  jenahajek
 permalink: /:title/
+# pagination: true
 
 # Build settings
 markdown: kramdown
@@ -35,7 +36,7 @@ defaults:
     scope:
       path: "knihy"
     values:
-      category: "cat-book"
+      category: "knihy"
   -
     scope:
       path: "knihy/_posts"
@@ -51,7 +52,7 @@ defaults:
     scope:
       path: "frontend"
     values:
-      category: "cat-frontend"
+      category: "frontend"
   -
     scope:
       path: "frontend/_posts"
@@ -67,7 +68,7 @@ defaults:
     scope:
       path: "notes"
     values:
-      category: "cat-note"
+      category: "notes"
   -
     scope:
       path: "notes/_posts"
@@ -82,6 +83,7 @@ defaults:
 
 gems:
   - jekyll-feed
+
 exclude:
   - Gemfile
   - Gemfile.lock

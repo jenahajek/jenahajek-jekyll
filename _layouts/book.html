@@ -42,13 +42,7 @@ layout: default
     <ul class="tag-list tag-list--aligned">
     {% assign sorted_tags = page.tags | sort %}
       {% for tag in sorted_tags %}
-        {% if page.categories contains 'cat-book' %}
-          {% assign slug = 'knihy' %}
-        {% elsif page.categories contains 'cat-frontend' %}
-          {% assign slug = 'frontend' %}
-        {% elsif page.categories contains 'cat-note' %}
-          {% assign slug = 'notes' %}
-        {% endif %}
+          {% assign slug = page.category %}
         <li class="tag-list__item">
           <a href="/{{ slug }}/tagy/{{ tag  | replace: ' ', '-'  | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c'  | replace: 'ý', 'y' }}"><h4 class="tag-list__tag">{{ tag }}</h4></a>
         </li>
