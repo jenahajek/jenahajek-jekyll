@@ -1,0 +1,35 @@
+---
+layout: index
+navigation_weight: 3
+hr: horizonal-rule
+title: Čtenářský deník
+description: <p>Knihy, jakožto ideální prostředek pro sdílení znalostí, hodně a pozitivně ovlivňují můj život. Jak profesní, tak osobní. Chtěl bych proto krátce zmínit ty, které stojí za investovaní času i peněz.</p>
+avatar: avatar.jpg
+--- 
+<ul class="post-thumbnail__list">
+  {% for post in site.posts %}      
+  {% if post.categories contains 'cat-book' %}
+  <li class="post-thumbnail">
+    {% if post.imageName %}
+      <div class="post-thumbnail__inner post-thumbnail__inner--align-right">
+        <a href="{{ post.url | relative_url }}" class="post-thumbnail__image-wrapper">
+          <img class="post-thumbnail__image" src="{{ site.url }}/knihy/assets/{{post.imageName}}" alt="{{ post.title}} - cover">
+        </a>
+    {% else %}
+      <div class="post-thumbnail__inner">
+    {% endif %}
+      <div class="post-thumbnail__content">
+        <p class="post-thumbnail__author">{{ post.author }}</p>
+        <h2 class="post-thumbnail__title">
+          <a class="book-list__link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-thumbnail__text">
+          {{ post.excerpt | truncatewords: 80 | remove: '<p>' | remove: '</p>' }}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="post-thumbnail__more-link">Číst dál</a>
+      </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
