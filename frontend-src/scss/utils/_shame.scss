@@ -9,7 +9,8 @@
 
 .l-sidebar__content {
 
-    > a {
+    > a,
+    p a {
         @include link-underline;
     }
 }
