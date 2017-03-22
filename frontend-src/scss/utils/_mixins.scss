@@ -217,3 +217,14 @@
     border-width: 5px 0 5px 8px;
     border-color: transparent transparent transparent palette(primary);
 }
+
+@mixin arrow--left {
+    border-width: 5px 8px 5px 0;
+    border-color: transparent palette(primary) transparent transparent;
+}
+
+@mixin link-inverted {
+    border-color: $link-color--hover;
+    background-color: $link-color--hover;
+    color: $white;
+}
