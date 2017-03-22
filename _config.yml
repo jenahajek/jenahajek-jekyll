@@ -59,7 +59,7 @@ defaults:
     scope:
       path: "knihy/_posts"
     values:
-      layout: "book" # overrides previous default layout
+      layout: "post" # overrides previous default layout
       permalink: /knihy/:title/
       comments: true
   -
@@ -76,7 +76,7 @@ defaults:
     scope:
       path: "frontend/_posts"
     values:
-      layout: "book" # overrides previous default layout
+      layout: "post" # overrides previous default layout
       permalink: /frontend/:title/
       comments: true
   -
@@ -94,7 +94,7 @@ defaults:
     scope:
       path: "notes/_posts"
     values:
-      layout: "book" # overrides previous default layout
+      layout: "post" # overrides previous default layout
       permalink: /notes/:title/
   -
     scope:
