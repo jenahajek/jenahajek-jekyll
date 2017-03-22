@@ -1,22 +1,55 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  <header class="article__header">
+    <h1 class="article__title">
+      {{ page.title | escape }}
+    </h1>
+    {% if page.subtitle %}
+    <h2 class="article__subtitle">
+      {{ page.subtitle }}
+    </h2>
+    {% endif %}
+    {% if page.author %}
+      <p class="article__book-author">
+        {{ page.author }}
+      </p>
+    {% endif %}
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+  <div>
+    <span class="article__content">
+      {{ page.excerpt }}
+      {% include book-image.html %}
+      {{ content }}
+    </span>
   </div>
 
-  {% for category_name in page.categories limit:5 %}
-  <h4>{{ category_name }}</h4>
-  {% endfor %}
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+  <p class="article__date">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: "%b %-d, %Y" }}
+    </time>
+  </p>
 </article>
+
+
+
+  {% include single-nav.html %}
+  
+  {% if page.tags %}
+    <ul class="tag-list tag-list--aligned">
+    {% assign sorted_tags = page.tags | sort %}
+      {% for tag in sorted_tags %}
+          {% assign slug = page.category %}
+        <li class="tag-list__item">
+          <a href="/{{ slug }}/tagy/{{ tag  | replace: ' ', '-'  | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c'  | replace: 'ý', 'y' }}"><h4 class="tag-list__tag">{{ tag }}</h4></a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="comments">
+    {% include disqus_comments.html %}
+  </div>
