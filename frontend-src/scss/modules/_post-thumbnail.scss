@@ -102,36 +102,3 @@
         @include link-underline;
     }
 }
-
-.post-thumbnail__more-link {
-    @include type-setting(-1);
-    @include transition();
-    position: relative;
-    text-transform: uppercase;
-    border: 1px solid palette(gray);
-    border-radius: 30px;
-    padding: 8px $vr 7px ($vr / 2);
-    color: palette(black);
-    
-    &:hover,
-    &:focus {
-        border-color: $link-color--hover;
-        background-color: $link-color--hover;
-        color: $white;
-        
-        &::after {
-            border-left-color: palette(white);
-        }
-    }
-
-    &::after {
-        @include transition();
-        @include transition-property(border-left-color);
-        @include arrow;
-        border-left-color: palette(gray);
-        position: absolute;
-        top: 50%;
-        margin-top: -5px;
-        right: 13px;
-    }
-}
