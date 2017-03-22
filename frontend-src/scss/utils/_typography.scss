@@ -128,22 +128,28 @@ input, form, textarea {
 //   mark only container and then style headings with nesting
 .article,
 .scope {
-    h1 {
-        // @include type-setting(3);
-    }
 
     h2 {
         @include type-setting(2);
+        font-weight: bold;
         margin-top: ($vr * 3);
         margin-bottom: $vr;
     }
 
     h3 {
         @include type-setting(1);
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     h4 {
-        margin-bottom: ($vr / 2);
+        @include type-setting(0);
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        @include debug;
     }
 
     a {
@@ -157,15 +163,15 @@ input, form, textarea {
 
     code {
         @include type-setting(-1);
-        background: palette(primary, light);
+        background: palette(gray, light);
+        border: 1px solid palette(gray, mid);
         border-radius: 3px;
         padding: 4px 4px 2px;
     }
 
     pre {
         @include type-setting(0);
-        background: palette(primary, x-dark);
-        color: white;
+        background: palette(gray, light);
         border-radius: 5px;
         padding: ($vr / 2) $vr;
         margin: 0 ($vr / -1) $vr;
@@ -173,6 +179,7 @@ input, form, textarea {
         code {
             background: none;
             padding: 0;
+            border: none;
         }
     }
 
