@@ -37,20 +37,21 @@
 }
 
 .main-nav__title {
-    min-width: 400px;
+    width: 400px;
     padding: $vr $vr 0;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1.2;
+    position: relative;
     
     @include respond-to(medium) {
 
         &::after {
             @include arrow;
             display: inline-block;
-            position: relative;
-            left: $vr;
-            top: -3px;
+            position: absolute;
+            right: 0;
+            top: 40px;
         }
     
         padding: $vr;
