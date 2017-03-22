@@ -1,14 +1,16 @@
 ---
 layout: index
+category: knihy
 navigation_weight: 3
 hr: horizonal-rule
 title: Čtenářský deník
 description: <p>Knihy, jakožto ideální prostředek pro sdílení znalostí, hodně a pozitivně ovlivňují můj život. Jak profesní, tak osobní. Chtěl bych proto krátce zmínit ty, které stojí za investovaní času i peněz.</p>
 avatar: avatar.jpg
+pagination:
+  enabled: true
 --- 
 <ul class="post-thumbnail__list">
-  {% for post in site.posts %}      
-  {% if post.categories contains site.book-slug %}
+  {% for post in paginator.posts %}    
   <li class="post-thumbnail">
     {% if post.imageName %}
       <div class="post-thumbnail__inner post-thumbnail__inner--align-right">
@@ -30,6 +32,5 @@ avatar: avatar.jpg
       </div>
     </div>
   </li>
-  {% endif %}
   {% endfor %}
 </ul>

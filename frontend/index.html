@@ -1,22 +1,23 @@
 ---
 layout: index
 navigation_weight: 1
+category: frontend
 title: Frontend
 description: <p>Nifty CSS tricks are usually really cool, but I personally am intrigued more by architecture &ndash; organizing, building and structuring the code. I don't want to make just good looking products. I want them to be well-built and prepared to withstand anything.</p>
 avatar: avatar.jpg
+pagination: 
+  enabled: true
 ---
 {% comment %}
 <p>Kódování je radost &ndash; pokud se ovšem nevymyká kontrole. Píšu hlavně o tom, jak pracovat efektivně, předcházet problémům a být na výsledky své práce pyšný.</p>
 {% endcomment %}
 
 <ul class="post-list">
-  {% for post in site.posts %}
-  {% if post.categories contains site.frontend-slug %}
+  {% for post in paginator.posts %}
     <li class="post-list__item">
       <a class="post-list__link" href="{{ post.url | relative_url }}">
       <h2 class="post-list__title">{{ post.title | escape }}</h2>
       </a>
     </li>
-  {% endif %}
   {% endfor %}
 </ul>
