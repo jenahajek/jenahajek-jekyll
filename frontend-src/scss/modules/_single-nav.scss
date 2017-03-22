@@ -14,16 +14,15 @@
 }
 
 .single-nav__item {
+    @include nav-link;
+    @include transition();
+    color: $link-color;
     width: 100%;
     float: left;
     padding: ($vr / 2) ($vr / 2) 0;
 
     @include respond-to(medium) {
         width: 50%;
-    }
-
-    &:hover {
-        background: palette(gray, light);
     }
 }
 
@@ -35,10 +34,46 @@
         text-align: right;
         border-top: none;
     }
+    
+    &:hover,
+    &:focus {
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
 }
 
 .single-nav__caption {
     @include type-setting(-1);
+    position: relative;
+    display: inline-block;
     color: palette(black);
     padding: 0 ($vr / 2);
+    
+    &::before {
+        @include arrow;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+    }
+}
+
+.single-nav__caption--older {
+    padding-left: $vr;
+    
+    &::before {
+        @include arrow--left;
+        border-right-color: palette(gray);
+        left: ($vr / 2);
+    }
+}
+
+.single-nav__caption--newer {
+    padding-right: $vr;
+    
+    &::before {
+        border-left-color: palette(gray);
+        right: ($vr / 2);
+    }
 }
