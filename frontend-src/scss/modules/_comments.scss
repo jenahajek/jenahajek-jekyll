@@ -1,0 +1,5 @@
+.comments {
+    @include center-content;
+    margin: $vr auto;
+    padding: ($vr * 2) $vr;
+}

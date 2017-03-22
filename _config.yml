@@ -61,6 +61,7 @@ defaults:
     values:
       layout: "book" # overrides previous default layout
       permalink: /knihy/:title/
+      comments: true
   -
     scope:
       path: "knihy/tagy"
@@ -77,6 +78,7 @@ defaults:
     values:
       layout: "book" # overrides previous default layout
       permalink: /frontend/:title/
+      comments: true
   -
     scope:
       path: "frontend/tagy"
@@ -87,6 +89,7 @@ defaults:
       path: "notes"
     values:
       category: "notes" # this seems not to be working
+      comments: true
   -
     scope:
       path: "notes/_posts"

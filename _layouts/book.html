@@ -50,9 +50,6 @@ layout: default
     </ul>
   {% endif %}
 
-{% comment %}
-{% endcomment %}
-
-  {% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-  {% endif %}
+  <div class="comments">
+    {% include disqus_comments.html %}
+  </div>
