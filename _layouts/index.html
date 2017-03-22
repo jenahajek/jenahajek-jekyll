@@ -26,20 +26,34 @@ layout: default
       
       {{ content }}
               
-      {% if paginator.total_pages > 1 %}
-      <ul>
-        {% if paginator.previous_page %}
-        <li>
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-        </li>
+      <!-- 
+          Showing buttons to move to the next and to the previous list of posts (pager buttons).
+        -->
+        {% if paginator.total_pages > 1 %}
+        <ul class="pager">
+            {% if paginator.previous_page %}
+            <li class="pager__item">
+                <a class="pager__link pager__link--newer" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Novější</a>
+            </li>
+            {% endif %}
+
+            {% if paginator.page_trail %}
+              {% for trail in paginator.page_trail %}
+                {% assign trailPath = trail.path | prepend: site.baseurl %}
+                
+                <li class="pager__item">
+                  <a class="pager__link {% if page.url == trailPath %} pager__link--selected {% endif %}" href="{{ trailPath }}" title="{{trail.title}}">{{ trail.num }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+
+            {% if paginator.next_page %}
+            <li class="pager__item next">
+                <a class="pager__link pager__link--older" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Starší</a>
+            </li>
+            {% endif %}
+        </ul>
         {% endif %}
-        {% if paginator.next_page %}
-        <li>
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-        </li>
-        {% endif %}
-      </ul>
-      {% endif %}
 
   </div>
 </div>
