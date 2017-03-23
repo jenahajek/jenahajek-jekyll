@@ -4,3 +4,6 @@ _site
 node_modules
 _blog-posts-ideas.md
 _backlog.md
+frontend/_drafts
+knihy/_drafts
+notes/_drafts
