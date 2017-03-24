@@ -3,13 +3,13 @@
 
 
 @mixin ff--heading {
-    font-family: proxima-nova, "chaparral-pro-display", georgia, sans-serif;
+    font-family: proxima-nova, 'helvetica', sans-serif;
     // font-style: italic;
     // font-weight: 300;
 }
 
 @mixin ff--body {
-    font-family: proxima-nova, "chaparral-pro", georgia, sans-serif;
+    font-family: proxima-nova, 'helvetica', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
