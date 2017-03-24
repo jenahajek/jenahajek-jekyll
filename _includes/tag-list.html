@@ -7,7 +7,7 @@
             {% assign t = tag[1] | where: "categories", page.category %}
             {% if t != empty %}
               {% assign slug = page.category %}
-              {% assign plainTag = tag[0] | replace: ' ', '-' | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c' | replace: 'ý', 'y' %}
+              {% assign plainTag = tag[0] | downcase | replace: ' ', '-' | replace: 'Č', 'c' | replace: 'í', 'i' | replace: 'č', 'c' | replace: 'ý', 'y' %}
                 <li class="tag-list__item" id="{{ p.title }}-item">
                   <a class="tag-list__tag tag-list__tag--strong {% if page.url contains plainTag %} tag-list__tag--active {% endif %}" href="{{ site.url }}/{{ slug }}/tagy/{{ plainTag }}">{{ tag[0]}}</a>
                 </li>
