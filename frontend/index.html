@@ -14,11 +14,13 @@ pagination:
 {% endcomment %}
 
 <ul class="post-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
+  {% if post.categories contains site.frontend-slug %}    
     <li class="post-list__item">
       <a class="post-list__link" href="{{ post.url | relative_url }}">
       <h2 class="post-list__title">{{ post.title | escape }}</h2>
       </a>
     </li>
+  {% endif %}
   {% endfor %}
 </ul>

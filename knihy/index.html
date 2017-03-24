@@ -11,7 +11,8 @@ pagination:
   category: knihy
 --- 
 <ul class="post-thumbnail__list">
-  {% for post in paginator.posts %}    
+  {% for post in site.posts %}
+  {% if post.categories contains site.book-slug %}    
   <li class="post-thumbnail">
     {% if post.imageName %}
       <div class="post-thumbnail__inner post-thumbnail__inner--align-right">
@@ -33,5 +34,6 @@ pagination:
       </div>
     </div>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
