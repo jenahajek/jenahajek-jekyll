@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Save yourself tedious work with better editor settings</title>
+  <meta name="description" content="Our work usually consists of solving uncommon problems (which is something we can be later proud of), so as mechanical tasks or unfortunately dealing with po...">
+
+  <link rel="stylesheet" href="/frontend-dist/style.css">
+  <link rel="canonical" href="http://localhost:4000/frontend/pimp-your-sublime-packages/">
+  <link rel="alternate" type="application/rss+xml" title="jenahajek.com" href="/feed.xml">
+  
+  
+
+  <script src="https://use.typekit.net/njl1yeg.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+
+</head>
+
+
+  <body>
+
+    
+
+<ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="/">jenahajek.com</a>
+    </li>
+    
+        
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/frontend/">frontend</a>
+            </li>
+        
+    
+        
+            <li class="breadcrumbs__item breadcrumbs__item--active">pimp your sublime packages</li>
+        
+    
+</ul>
+
+
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="article">
+
+  <header class="article__header">
+    <h1 class="article__title">
+      Save yourself tedious work with better editor settings
+    </h1>
+    
+    
+  </header>
+
+  <div>
+    <span class="article__content">
+      <p>Our work usually consists of solving uncommon problems (which is something we can be later proud of), so as mechanical tasks or unfortunately dealing with pointless obstacles. Although it is impossible to avoid all the obstacles, we can reduce them greatly with good settings. So without further do, let’s take a look on few strategies how to set our environment up and stop wasting valuable time and energy.</p>
+
+
+      
+      <p>Our work usually consists of solving uncommon problems (which is something we can be later proud of), so as mechanical tasks or unfortunately dealing with pointless obstacles. Although it is impossible to avoid all the obstacles, we can reduce them greatly with good settings. So without further do, let’s take a look on few strategies how to set our environment up and stop wasting valuable time and energy.</p>
+
+<p><em>This article is geared toward Sublime Text editor. If yours editor differs, you might still benefit from this article (get a sense what plugins is good to have and then search for similar ones designated for given editor).</em></p>
+
+<h2 id="packages">Packages</h2>
+<p>Packages are easy and quick way how to enrich your editor with extra helpful, time saving functions. Here’s the list of ones I recommend:</p>
+
+<h3 id="package-control">Package control</h3>
+<p>The very first package you should install is <a href="https://packagecontrol.io/installation">Package control</a>. It allows you to search, install and maintain all the other plugins.
+After installation you access its menu via hotkey <code class="highlighter-rouge">cmd + shift + P</code>. Then type <em>install</em>, chose <code class="highlighter-rouge">install package</code> and then start typing keywords or name of the plugin you want.</p>
+
+<h3 id="plugins-for-faster-writing">Plugins for faster writing</h3>
+<p>Completely essential tools for any front-end developer. Instead of tedious writing of everything, these plugins with snippets and autocompletion will help you write faster and more efficienly (also with less mistakes :)). Hit just few key strokes, tab key and thing you wish will appear magically in front of your eyes.
+Autocompletion is usually really well done and saves you tons of the time.</p>
+
+<h3 id="emmet-and-emmet-css-snippets"><a href="https://packagecontrol.io/packages/Emmet">Emmet</a> and <a href="https://packagecontrol.io/packages/Emmet%20Css%20Snippets">Emmet CSS snippets</a></h3>
+<p>TOP25 and for a good reason. Synonym of autocompletion. Download it, check documentation and give it a try. I also recommend printing <a href="http://docs.emmet.io/cheat-sheet/">cheat sheet</a> and really learn how to get most of this tool. It’s plainly invaluable.</p>
+
+<h4 id="sass"><a href="https://packagecontrol.io/packages/Sass">Sass</a></h4>
+<p>This plugin add highlighting and autocompletion for Sass. It’s in TOP25 most used plugins. If you use Sass and don’t have this yet, download it now.</p>
+
+<h4 id="scss"><a href="https://packagecontrol.io/packages/SCSS">SCSS</a></h4>
+<p>This one supports SCSS and it’s in TOP100. Honestly, not sure if you get something extra if you already have previously mentioned Sass plugin (I have both of them for some time), but it doesn’t impede anything.</p>
+
+<h4 id="stylus"><a href="https://packagecontrol.io/packages/Stylus">Stylus</a></h4>
+<p>If you use Stylus, this plugin is for you. TOP100.</p>
+
+<h3 id="hayaku---tools-for-writing-css-faster"><a href="https://packagecontrol.io/packages/Hayaku%20-%20tools%20for%20writing%20CSS%20faster">Hayaku - tools for writing CSS faster</a></h3>
+<p>Another tool for expanding abbreviations, quite similar with Emmet. Abbreviations can be fuzzy, Hayaku will most likely guess what you were after. It supports CSS and preprocessors (Sass, Less, Stylus), too. There is no learnign curve - you just install it and write CSS faster than before. For more inspiration what you can do check <a href="http://hayakubundle.com/">documentation</a>.</p>
+
+<h3 id="plugins-for-keeping-code-clean">Plugins for keeping code clean</h3>
+<p>Good developers write code. Great developers write great, clean code. If you wanna be nice to your co-workers don’t skimp on some code housekeeping. Afterall, it doesn’t have to take much effort.</p>
+
+<h4 id="sublimelinter"><a href="https://packagecontrol.io/packages/SublimeLinter">SublimeLinter</a></h4>
+<p>Linters are great tools for keeping eye on correct code formating. You need to set some rules initially, then during writing it warns you about some inconsitencies, breaking rules, indentation etc.
+This plugin is a framework for concrete linters. It made it to the TOP25.</p>
+
+<h4 id="sublimelinter-contrib-scss-lint"><a href="https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint">Sublime​Linter-contrib-scss-lint</a></h4>
+<p>Linter for SCSS I use. It is required to have <code class="highlighter-rouge">.scss-lint.yml</code> file in the root, where are specified linting rules for given project. Sublime (with this plugin) will then gently warn you (with a color dot next to line number) when you violate the rules. Warnings are not obtrusive so when you have a good reason for breaking the rule, you can ignore the warning easily. In bottom status bar you also get better description of violation and suggested solution. There is a great <a href="https://www.sitepoint.com/getting-started-with-scss-lint/">article how to get up and running</a>.</p>
+
+<h4 id="editorconfig"><a href="https://packagecontrol.io/packages/EditorConfig">EditorConfig</a></h4>
+<p>On similar note, <a href="https://github.com/sindresorhus">Sindre ‘evercoding’ Sorhus</a> made plugin to help developers to have consistent coding/programming style accross various editors or IDEs. First decide and set the rules with your team, then save them in <a href="http://editorconfig.org/">configuration file</a> in project’s root folder.
+The idea is that editors and IDEs with EditorConfig plugin will check for configuration file. If the editor finds it, it makes changes to your settings accordingly. With EditorConfig, you just indend with tab and editor will use soft/hard 2 or 4 tab width depending on the project settings. So you can code how you are used to, don’t need to tweak settings all the time manually and you will avoid unnecessary diffs in git. Awesome, isn’t it?</p>
+
+<h3 id="general">General</h3>
+<p>Get more control or useful information for any kind of project.</p>
+
+<h4 id="gitgutter"><a href="https://packagecontrol.io/packages/GitGutter">GitGutter</a></h4>
+<p>Simple and so helpful plugin. All it does is indicate diffs next to line number. No need to check Git client to see, where something has changed.</p>
+
+<h4 id="sidebarenhancements"><a href="https://packagecontrol.io/packages/SideBarEnhancements">SidebarEnhancements</a></h4>
+<p>Default sidebar in Sublime doesn’t do pretty much anything, except showing file structure. This extension gives you more, rather useful, options like <em>copy path</em>, <em>find file named</em>, <em>duplicate</em> and so on.</p>
+
+<h3 id="highlighting">Highlighting</h3>
+<p>Syntax highlighting is standard, but some advanced or custom settings might come handy.</p>
+
+<h4 id="generic-config"><a href="https://packagecontrol.io/packages/Generic%20Config">Generic Config</a></h4>
+<p>In case you work with configuration files, you might appreciate this plugin, which brings syntax highlighting. It might sound like a no big deal, yet it can save you from lengthy search of forgotten quotes (causing project crashing).</p>
+
+<h4 id="persistentregexhighlight"><a href="https://packagecontrol.io/packages/PersistentRegexHighlight">PersistentRegexHighlight</a></h4>
+<p>This plugin will allow you to create regular expressions that will highlight for all documents. I use it for highlighting of words like <em>todo</em>, media-queries mixins and more.
+After installation you need to configure it as you wish. You do it in <em>sublime text -&gt; preferences -&gt; package settings -&gt; PersistentRegexHighlighting -&gt; settings user</em>. It can then look like this:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Please</span><span class="w"> </span><span class="err">see</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">README</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">more</span><span class="w"> </span><span class="err">information</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">settings.</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Array</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">objects</span><span class="w"> </span><span class="err">containing</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">regular</span><span class="w"> </span><span class="err">expression</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">optional</span><span class="w"> </span><span class="err">coloring</span><span class="w"> </span><span class="err">scheme</span><span class="w">
+    </span><span class="nt">"regex"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="nt">"pattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"respond-to"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"color_scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00FF00"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"ignore_case"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"underline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"pattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"todo"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"color_scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FF0000"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"ignore_case"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"underline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">If</span><span class="w"> </span><span class="err">highlighting</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">enabled</span><span class="w">
+    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">If</span><span class="w"> </span><span class="err">highlighting</span><span class="w"> </span><span class="err">should</span><span class="w"> </span><span class="err">occur</span><span class="w"> </span><span class="err">when</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">view</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">loaded</span><span class="w">
+    </span><span class="nt">"on_load"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">If</span><span class="w"> </span><span class="err">highlighting</span><span class="w"> </span><span class="err">should</span><span class="w"> </span><span class="err">occur</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">modifications</span><span class="w"> </span><span class="err">happen</span><span class="w">
+    </span><span class="nt">"on_modify"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">File</span><span class="w"> </span><span class="err">pattern</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">disable</span><span class="w"> </span><span class="err">on.</span><span class="w"> </span><span class="err">Should</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">specified</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">Unix</span><span class="w"> </span><span class="err">style</span><span class="w"> </span><span class="err">patterns</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Note,</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">looks</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">absolute</span><span class="w"> </span><span class="err">path</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">match</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">pattern.</span><span class="w"> </span><span class="err">So</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">trying</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">ignore</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">single</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">(e.g.</span><span class="w"> </span><span class="err">README.md),</span><span class="w"> </span><span class="err">you</span><span class="w"> </span><span class="err">will</span><span class="w"> </span><span class="err">need</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">specify</span><span class="w"> </span><span class="nt">"**/README.md"</span><span class="w">
+    </span><span class="nt">"disable_pattern"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Maximum</span><span class="w"> </span><span class="err">file</span><span class="w"> </span><span class="err">size</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">run</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">PersistentRegexHighlight</span><span class="w"> </span><span class="err">on.</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Any</span><span class="w"> </span><span class="err">value</span><span class="w"> </span><span class="err">less</span><span class="w"> </span><span class="err">than</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">equal</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">zero</span><span class="w"> </span><span class="err">will</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">treated</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">non</span><span class="w"> </span><span class="err">limiting</span><span class="w"> </span><span class="err">value.</span><span class="w">
+    </span><span class="nt">"max_file_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="did-it-help-you">Did it help you?</h2>
+<p>Probably you already knew few tips, others might be new and greatly beneficial. Maybe you use great package or method I haven’t mentioned. Or is there anything unclear and you would appreciate greater detail? In such cases, let me know in the comments.</p>
+
+    </span>
+  </div>
+
+  <p class="article__date">
+    <time datetime="2017-03-22T18:40:00+08:00" itemprop="datePublished">
+      Mar 22, 2017
+    </time>
+  </p>
+</article>
+
+
+
+  
+
+
+
+  <script>
+  document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = ''; }
+  if (e.keyCode == '39') { window.location = ''; }
+  };
+  </script>
+
+
+  
+  
+    <ul class="tag-list tag-list--aligned">
+    
+      
+          
+        <li class="tag-list__item">
+          <a href="/frontend/tagy/Sublime-Text"><h4 class="tag-list__tag">Sublime Text</h4></a>
+        </li>
+      
+          
+        <li class="tag-list__item">
+          <a href="/frontend/tagy/efficiency"><h4 class="tag-list__tag">efficiency</h4></a>
+        </li>
+      
+          
+        <li class="tag-list__item">
+          <a href="/frontend/tagy/text-editor"><h4 class="tag-list__tag">text editor</h4></a>
+        </li>
+      
+    </ul>
+  
+
+  <div class="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://jenahajek.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+  </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+    <p class="site-footer">
+        ∾
+    </p>
+</footer>
+    <script src="/frontend-dist/js/libs/prism.js"></script>
+  </body>
+
+</html>
