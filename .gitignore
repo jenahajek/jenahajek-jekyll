@@ -1,4 +1,4 @@
-# _site since using jekyll-paginate-v2 plugin, i need to upload generated site, too
+_site
 .sass-cache
 .jekyll-metadata
 node_modules
