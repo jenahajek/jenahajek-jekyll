@@ -43,7 +43,6 @@ exclude:
   - node_modules
   - frontend-src
   - readme.md
-  - CNAME
 
 
 
