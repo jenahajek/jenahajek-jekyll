@@ -248,4 +248,10 @@ input, form, textarea {
         height: 1px;
         background: palette(gray, light);
     }
+
+    .footnotes {
+        p {
+            @include type-setting(-1);
+        }
+    }
 }
