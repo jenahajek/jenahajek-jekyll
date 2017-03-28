@@ -7,9 +7,8 @@ pages: 272
 imageName: disrupted.png
 tags:
 - biografie
+excerpt: Vtipný příběh o temných stránkách startupů. Dan Lyons psal blog <a href="http://www.fakesteve.net/">fake Steve Jobs</a> a pracoval jako úspěšný novinář pro Forbes i Newsweek. V jeho 51 letech už nasbíral hodně zkušeností, což bylo znát i na výplatní pásce. Během snižování nákladů ho kvůli tomu dost nevybíravým způsobem vyhodili. Ten okamžik přišel (pochopitelně) v naprosto nevhodnou dobu.
 ---
-Vtipný příběh o temných stránkách startupů. Dan Lyons psal blog <a href="http://www.fakesteve.net/">fake Steve Jobs</a> a pracoval jako úspěšný novinář pro Forbes i Newsweek. V jeho 51 letech už nasbíral hodně zkušeností, což bylo znát i na výplatní pásce. Během snižování nákladů ho kvůli tomu dost nevybíravým způsobem vyhodili. Ten okamžik přišel (pochopitelně) v naprosto nevhodnou dobu.
-
 Od nástupu ze školy Lyons v kariéře jen stoupal a práce si hledala jeho, ne naopak. Takže teď ani nevěděl, kde začít. Po pár měsících kdy psal jako freelancer se rozhodne přidat do startupu. Nakonec si plácne z firmou zvanou HubSpot a má z toho velmi dobrý pocit, jež ovšem netrvá dlouho.
 
 Hned první den při prohlídce kanceláří vidí spíš něco, co mu víc než pracoviště připomíná vysokoškolský klub - fotbálky, NERF guns, herní konzole, skejťáci s pivkama na stole, dokonce i “wall of candy”… a Lyonsovi se začne v hlavě ozývat tichý hlas, šeptajíc <em>fuck, fuck, fuck</em>. Ten postupně sílí, stejně jako čtenářovo pobavení.

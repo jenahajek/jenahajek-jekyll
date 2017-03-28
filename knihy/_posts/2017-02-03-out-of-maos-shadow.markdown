@@ -9,9 +9,8 @@ tags:
 - politika
 - historie
 - Čína
+excerpt: Philip P. Pan vystudoval v Beijingu mandarínskou čínštinu a další roky působil jako přední zahraniční korespondent pro americké deníky. Během sedmi strávených let se dostal na bezpočet míst, i tam, kam si ostatní moc netroufali a udělal mnoho rozhovorů s nejrůznějšími lidmi. Na téměř 450 stranách výmluvně sepsal to nejzajímavější a čtenáři tak představuje situaci v největším autoritářském systému na světě.
 ---
-Philip P. Pan vystudoval v Beijingu mandarínskou čínštinu a další roky působil jako přední zahraniční korespondent pro americké deníky. Během sedmi strávených let se dostal na bezpočet míst, i tam, kam si ostatní moc netroufali a udělal mnoho rozhovorů s nejrůznějšími lidmi. Na téměř 450 stranách výmluvně sepsal to nejzajímavější a čtenáři tak představuje situaci v největším autoritářském systému na světě.
-
 V prvních pár kapitolách se dozvíme o historii a hlavních událostech, které výustily v současný stav. Skrz příběhy nezávislého dokumentaristy nebo bývalého účastníka revoluce získáme živou představu o vzniku komunistické strany, Maovu vládnutí s nechvalně známými experimenty - tažením proti “pravičákům”, velkým skokem vpřed nebo kulturní revolucí. Odhalíme jak vznikly velké chyby a hříchy režimu i to, v co vyústily nebo jak se k nim pak strana postavila. Kdo hádal, že místo uznání a omluvy přišla cenzura a překrucování historie, vyhrál.
 
 Prostřední část knihy vypráví 3 příběhy. První o hornících. Ti pracují v mnohem otřesnějších podmínkách než jejich kolegové v jiných zemích, např. Rusku nebo Indii. Statistici zjistili, že každých třicet minut někdo umře při výbuchu plynu či zaplavené šachtě. Majitel dolu ale raději zaplatí pozůstalým, než aby investoval do bezpečnějšího provozu. Horníkům tak nezbývá, než riskovat životy. Jinou práci neseženou a pomoci se nikde nedovolají, protože vláda je domluvená s vlastníky dolu.

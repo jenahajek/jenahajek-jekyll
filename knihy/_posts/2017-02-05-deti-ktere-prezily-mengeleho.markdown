@@ -9,9 +9,8 @@ tags:
 - biografie
 - česky
 - historie
+excerpt: Drásavý příběh židovských dvojčat, jejichž idylické dětství v Rumunské vesničce přerval Hitlerův nástup k moci.
 ---
-Drásavý příběh židovských dvojčat, jejichž idylické dětství v Rumunské vesničce přerval Hitlerův nástup k moci.
-
 Kniha je psaná ich formou z pohledu desetileté Evy (mladší ale průbojnější ze sester). Ta poutavě a detailně popisuje jejich příjemný život na venkově, který se se začátkem války začně pomalu měnit. Nově dosazené učitelky z Maďarska začnou šířit protižidovské nálady, přijde šikana a začíná být jasné, že život nebude jako dřív. Dramatická změna ovšem přijde v roce 1944, kdy se v Maďarsku vystřídá vláda, do čela se dostane Strana šípových křížů, která má v programu tvrdý antisemitismus. Postup proti židům tedy značně přitvrdí. Než se rodina Mozesů naděje, jsou na cestě do Osvětimi.
 
 Pak věci dostanou rychlý spád. Dvojčata jsou odvedeny na pokusy doktora Mengeleho, rodiče jinam a už nikdy se spolu nesetkají. Ačkoli se německá armáda musí stahovat a začíná se pod náporem spojenců hroutit, čas v koncentračních táborech utíká pomalu. V knize je popsáno v jakých otřesných podmínkách fungovaly (zvlášt) malé děti. Je to příběh o houževnatosti, odvaze a nekonečné touze přežít. Zajímavým a příjemným překvapením byl i motiv odpuštění.

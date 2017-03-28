@@ -8,9 +8,8 @@ imageName: zbrane-vlivu.png
 tags:
 - psychologie
 - česky
+excerpt: Téhle knize jsou dlouho odolával, ani nevím proč. Nakonec jsem se odhodlal a vůbec toho nelituju. Peníze i čas strávený četbou nebyly špatnou investicí.
 ---
-Téhle knize jsou dlouho odolával, ani nevím proč. Nakonec jsem se odhodlal a vůbec toho nelituju. Peníze i čas strávený četbou nebyly špatnou investicí.
-
 Cialdiniho znepokojovalo, jak často se stával obětí nejrůznějších nabídek, které mu někdo vnucoval. Přivedlo ho to ke studiu vyhovění a zůstal u toho už napořád. Po mnoha letech sbírání znalostí je protřídil a vtipně sepsal do téhle knihy.
 
 Seznámíme se tak s šesti nejpoužívanějšími “triky specialistů na vyhovění”. U každého z nich se dozvíme, proč a na jakém principu vůbec funguje, představí nám ho na konkrétním příkladu ze života a, co je možná nejdůležitější, poradí jak se nenechat vmanévrovat do automatického odkývání hlavou.

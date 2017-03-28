@@ -5,9 +5,8 @@ tags:
 - text editor
 - Sublime Text
 - efficiency
+excerpt: Our work usually consists of solving uncommon problems (which is something we can be later proud of), so as mechanical tasks or unfortunately dealing with pointless obstacles. Although it is impossible to avoid all the obstacles, we can reduce them greatly with good settings. So without further do, let's take a look on few strategies how to set our environment up and stop wasting valuable time and energy.
 ---
-Our work usually consists of solving uncommon problems (which is something we can be later proud of), so as mechanical tasks or unfortunately dealing with pointless obstacles. Although it is impossible to avoid all the obstacles, we can reduce them greatly with good settings. So without further do, let's take a look on few strategies how to set our environment up and stop wasting valuable time and energy.
-
 *This article is geared toward Sublime Text editor. If yours editor differs, you might still benefit from this article (get a sense what plugins is good to have and then search for similar ones designated for given editor).*
 
 ## Packages

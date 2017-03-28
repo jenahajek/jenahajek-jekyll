@@ -10,8 +10,8 @@ tags:
 - adventure racing
 - zdraví
 - audioknihy
+excerpt: Tuhle knihu jsem si prvně, ještě jakou žhavou novinku, stáhl na <a href="http://www.audible.com/" target="_blank">audible</a> jako audioknížku. Popisek sliboval propojení pár oblastí, které jsou mi blízké - vytrvalost, sport a principy. A kniha nezklamala.
 ---
-Tuhle knihu jsem si prvně, ještě jakou žhavou novinku, stáhl na <a href="http://www.audible.com/" target="_blank">audible</a> jako audioknížku. Popisek sliboval propojení pár oblastí, které jsou mi blízké - vytrvalost, sport a principy. A kniha nezklamala.
 
 Travis Macy žije v Boulderu (Colorado), jež je Mekkou ultra běžců, triatletů a podobných dobrodruhů. Jeho otec byl právník, ale miloval extrémní a vytrvalostní sporty, ke kterým od útlého věku vedl i Travise. Ten se postupem času vypracoval na vrcholového sportovce a věnuje se nejen dlouhým běhům, ale především adventure racingu. To jsou několikadenní závody, ve kterých se týmy (nejčastěji o 4 členech) snaží zdolat stanovené checkpointy v nejkratších časech, využívající různých outdoorových disciplín (kolo, kajak, slaňování, atp.).
 

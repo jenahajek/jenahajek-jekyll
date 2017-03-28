@@ -9,9 +9,8 @@ tags:
 - zdraví
 - TOP
 - česky
+excerpt: Strhující a velmi poutavý popis evoluce lidí, který mi pomohl pochopit souvislosti tam, kde by mě dřív ani nenapadlo hledat.
 ---
-Strhující a velmi poutavý popis evoluce lidí, který mi pomohl pochopit souvislosti tam, kde by mě dřív ani nenapadlo hledat.
-
 Kniha je rozdělená do třech hlavních částí. V první Lieberman vysvětlí evoluci a popíše přechod z opic na lidi. Druhou částí plynule naváže a my se dozvíme, jaké výhody či nevýhody přinesl další vývoj, tj. zemědělská, resp. průmyslová revoluce. Na závěr  dodá nejzajímavější část o současnosti a budoucnosti.
 
 V dnešní době jsou nejrozšířenější tzv. problémy z nesouladu. Naše těla se vyvinula jinak, než je používáme v moderních městech a na jiné palivo, než jakým se často ládujeme. Proto se nevyhnutelně vyskytnout předvídatelné problémy. A ačkoli je známe, je těžké se jim vyhnout, protože naše prostředí je nevyhovující a silně nás ovlivňuje.

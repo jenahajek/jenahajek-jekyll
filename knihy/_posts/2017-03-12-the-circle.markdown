@@ -8,9 +8,9 @@ imageName: the-circle.png
 tags:
 - fikce
 - společnost
+- audioknihy
+excerpt: Tentokrát bych se chtěl se smíšenými pocity podělit o tip na Orwellovský příběh o blízké budoucnosti. Doporučit ji chci, protože poskytuje docela dobrý úvod do problematiky (nejen) digitálního soukromí. To se, jak se v knize také dozvíme, týká všech. I když nejsme na internetu aktivní. Radost mi to ale nedělá, jelikož se nejedná o zrovna příjemné a optimistické čtení.
 ---
-Tentokrát bych se chtěl se smíšenými pocity podělit o tip na Orwellovský příběh o blízké budoucnosti. Doporučit ji chci, protože poskytuje docela dobrý úvod do problematiky (nejen) digitálního soukromí. To se, jak se v knize také dozvíme, týká všech. I když nejsme na internetu aktivní. Radost mi to ale nedělá, jelikož se nejedná o zrovna příjemné a optimistické čtení.
-
 Děj se odehrává se v Kalifornii, kde sídlí firma Circle. Zrodila se v okamžiku, kdy mladý vývojář udělal webovou službu, přes kterou se dá vyřídit témeř vše z jednoho účtu. Takové pohodlí naláká mnoho uživatelů, popularita služby zase investory a nové talenty. Záběr firmy se rychle rozšíří a ta začne pomocí technologií přetvářet svět na bezpečnější, spravedlivější, pohodlnější a propojenější. Ale za jakou cenu?
 
 Pro zvýšení transparentnosti například navrhnout speciální kameru pro politiky, kteří ji nosí neustále na hrudi a defacto každá vteřina jejich života je dostupná online. Obhajuje se to logikou *pokud nemáš co skrývat, nemusí ti to nijak vadit*. Nejprve se odhodlá pár nebojácných, později každý, kdo s připojením otálí, vypadá podezřele. Podobnou kameru začne nosit i hlavní hrdinka Mae a my tak máme možnost vidět, jaké dopady to má na její život i na ty, s nimiž přichází do kontaktu.
