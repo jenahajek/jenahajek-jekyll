@@ -1,35 +1,40 @@
 var gulp = require('gulp');
 
 // VARIABLES /////////////////////////////////////////
-
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var cssGlobbing = require('gulp-css-globbing');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
+var cssnano = require('gulp-cssnano');
+var autoprefixer = require('gulp-autoprefixer');
+// var postcss = require('gulp-postcss');
+
 var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
+var webp = require('gulp-webp');
+
+// run jekyll
+var gutil = require('gulp-util');
+var run          = require('gulp-run');
+
 var path = require('path');
-// var cache = require('gulp-cache'); // cache for images
 // tools
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var notify = require('gulp-notify');
-var webp = require('gulp-webp');
-var postcss = require('gulp-postcss');
 
 
 
 // VARIABLES /////////////////////////////////////////
-var rootPath = ''
+var rootPath = '';
 
 var paths = {
     //specifying path like this ensures that linter will notify you of suspicious rules from all scss files
@@ -52,11 +57,11 @@ var paths = {
     svgSprites: [
         rootPath + 'frontend-src/img/svg/*.svg'
     ],
-    dest : rootPath + 'frontend-dist'
+    sourceAssets: [
+        rootPath + '_source-assets/**/*'
+    ],
+    dest: rootPath + 'frontend-dist'
 };
-
-
-
 
 
 
@@ -155,7 +160,6 @@ gulp.task('scripts-libraries', function() {
     .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write())
-    .pipe(uglify())
     .pipe(gulp.dest(paths.dest + '/js/libs'))
 });
 
@@ -173,12 +177,47 @@ gulp.task('scripts-libraries-prod', function() {
 gulp.task('images', function(){
     return gulp.src(paths.images)
         .pipe(plumber())
+        .pipe(imageminJpegRecompress({
+            loops: 3,
+            min: 70,
+            max: 75,
+            progressive: true
+        })())
         .pipe(imagemin({
             optimizationLevel: 3, // png
             progressive: true, // jpg
             interlaces: true, // gif
             svgoPlugins: [{removeViewBox: false}], // svg
             use: [pngquant()] // png
+        }))
+        .pipe(gulp.dest(paths.dest + '/img'));
+});
+
+// This task optimizes contents of _source-assets folder. There I can mirror folder structure of desired output.
+gulp.task('postImages', function(){
+    return gulp.src(paths.sourceAssets)
+        .pipe(plumber())
+        .pipe(imageminJpegRecompress({
+            loops: 3,
+            min: 70,
+            max: 75,
+            progressive: true
+        })())
+        .pipe(imagemin({
+            optimizationLevel: 3, // png
+            progressive: true, // jpg
+            interlaces: true, // gif
+            svgoPlugins: [{removeViewBox: false}], // svg
+            use: [pngquant()] // png
+        }))
+        .pipe(gulp.dest(rootPath));
+});
+
+gulp.task('images2webp', function () {
+    return gulp.src(paths.images)
+        .pipe(webp({
+            quality: 75,
+            sns: 75
         }))
         .pipe(gulp.dest(paths.dest + '/img'));
 });
@@ -201,60 +240,39 @@ gulp.task('svgstore', function() {
         .pipe(gulp.dest(paths.dest + '/img/svg-sprite'));
 });
 
-gulp.task('loss-compress-jpeg', function () {
-    return gulp.src(paths.images)
-        .pipe(imageminJpegRecompress({
-            loops: 3,
-            min: 70,
-            max: 75,
-            progressive: true
-        })())
-        .pipe(gulp.dest(paths.dest + '/img'));
+var config = {
+  drafts: !!gutil.env.drafts      // pass --drafts flag to serve drafts
+};
+
+// Runs Jekyll build
+gulp.task('build:jekyll', function() {
+  var shellCommand = 'bundle exec jekyll build --config _config.yml,_localhost_config.yml';
+  if (config.drafts) { shellCommand += ' --drafts'; };
+
+  return gulp.src(rootPath)
+    .pipe(run(shellCommand))
+    .on('error', gutil.log);
 });
 
-gulp.task('images2webp', function () {
-    return gulp.src(paths.images)
-        .pipe(webp({
-            quality: 75,
-            sns: 75
-        }))
-        .pipe(gulp.dest(paths.dest + '/img'));
+gulp.task('build:jekyll:watch', ['build:jekyll'], function(cb) {
+  browserSync.reload();
+  cb();
 });
-
-gulp.task('images-optim', function(){
-    return gulp.src(paths.images)
-        .pipe(plumber())
-        .pipe(imageminJpegRecompress({
-            loops: 3,
-            min: 70,
-            max: 75,
-            progressive: true
-        })())
-        .pipe(imagemin({
-            optimizationLevel: 3, // png
-            progressive: true, // jpg
-            interlaces: true, // gif
-            svgoPlugins: [{removeViewBox: false}], // svg
-            use: [pngquant()] // png
-        }))
-        .pipe(gulp.dest(paths.dest + '/img'));
-});
-
-
-
-
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: {
             baseDir: '_site/',
+            ghostMode: false, // do not mirror clicks, reloads, etc. (performance optimization)
+            open: false, // do not open the browser (annoying)
             index: 'index.html'
         }
     });
     // browserSync.init({
     //     proxy: "jenahajek.loc"
     // });
-
+    // Watch site settings
+    gulp.watch(['_config.yml', '_localhost_config.yml'], ['build:jekyll:watch']);
     gulp.watch(paths.styles, ['sass']);
     gulp.watch(paths.images, ['images']);
     gulp.watch(paths.scripts, ['scripts', 'scripts-libraries']);
@@ -267,25 +285,17 @@ gulp.task('serve', ['sass'], function() {
 
 // TASKS shortcuts /////////////////////////////////////////
 gulp.task('clean', function() {
-    return del([paths.dest]);
-});
-
-gulp.task('clear-cache', function (done) {
-    return cache.clearAll(done);
-});
+    return del([paths.dest])
+}); // todo - vycistit i generovane assety pro posty?
 
 
 
 
 
-
-gulp.task('default', ['sass', 'scripts', 'scripts-libraries', 'images', 'images2webp', 'svgstore', 'serve']);
-
+gulp.task('default', ['sass', 'scripts', 'scripts-libraries', 'images', 'images2webp', 'postImages', 'svgstore', 'serve']);
 
 
-gulp.task('prod', ['clean', 'prod-task']);
+
 gulp.task('build', ['clean', 'prod-task']);
 
-
-
-gulp.task('prod-task', ['sass-prod', 'scripts-prod', 'scripts-libraries', 'images', 'images2webp']);
+gulp.task('prod-task', ['sass-prod', 'scripts-prod', 'scripts-libraries', 'postImages', 'images', 'images2webp']);

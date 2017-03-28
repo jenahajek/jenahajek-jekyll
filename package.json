@@ -27,10 +27,13 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.7.1",
     "gulp-scss-lint": "^0.3.8",
     "gulp-svg-sprite": "^1.2.19",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
+    "gulp-util": "^3.0.8",
+    "gutil": "^1.6.4",
     "imagemin-pngquant": "^4.2.0",
     "jshint": "^2.8.0",
     "path": "^0.12.7"
