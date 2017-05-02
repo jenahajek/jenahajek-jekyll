@@ -4,6 +4,7 @@ subtitle: An Endurance Champion's 8 Core Principles for Success in Business, Spo
 author: Travis Macy
 date:   2016-09-01 11:49:47 +0800
 pages: 288
+duration: 7 hodin 28 minut
 imageName: the-ultra-mindset.png
 tags:
 - sport

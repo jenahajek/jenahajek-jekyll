@@ -4,6 +4,7 @@ subtitle: My Unlikely Journey to Ultramarathon Greatness
 author: Scott Jurek with Steve Friedman
 date:   2017-03-19 11:49:47 +0800
 pages: 288
+duration: 8 hodin 24 minut
 imageName: eat-and-run.png
 tags:
 - biografie
