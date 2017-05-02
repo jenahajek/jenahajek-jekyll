@@ -25,7 +25,6 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.2.0",
-    "gulp-postcss": "^6.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
     "gulp-scss-lint": "^0.3.8",

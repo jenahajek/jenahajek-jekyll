@@ -1,35 +1,36 @@
-var gulp = require('gulp');
+var gulp                   = require('gulp');
 
-// VARIABLES /////////////////////////////////////////
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var cssGlobbing = require('gulp-css-globbing');
-var sourcemaps = require('gulp-sourcemaps');
-var cssnano = require('gulp-cssnano');
-var autoprefixer = require('gulp-autoprefixer');
-// var postcss = require('gulp-postcss');
+// styles tasks
+var plumber                = require('gulp-plumber');
+var sass                   = require('gulp-sass');
+var cssGlobbing            = require('gulp-css-globbing');
+var sourcemaps             = require('gulp-sourcemaps');
+var cssnano                = require('gulp-cssnano');
+var autoprefixer           = require('gulp-autoprefixer');
 
-var rename = require('gulp-rename');
-var jshint = require('gulp-jshint');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+// js tasks
+var rename                 = require('gulp-rename');
+var jshint                 = require('gulp-jshint');
+var concat                 = require('gulp-concat');
+var uglify                 = require('gulp-uglify');
 
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
+// image tasks
+var imagemin               = require('gulp-imagemin');
+var pngquant               = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var webp = require('gulp-webp');
+var svgstore               = require('gulp-svgstore');
+var svgmin                 = require('gulp-svgmin');
+var webp                   = require('gulp-webp');
 
 // run jekyll
-var gutil = require('gulp-util');
-var run          = require('gulp-run');
+var gutil                  = require('gulp-util');
+var run                    = require('gulp-run');
 
-var path = require('path');
 // tools
-var browserSync = require('browser-sync').create();
-var del = require('del');
-var notify = require('gulp-notify');
+var path                   = require('path');
+var browserSync            = require('browser-sync').create();
+var del                    = require('del');
+var notify                 = require('gulp-notify');
 
 
 
@@ -80,8 +81,14 @@ var autoprefixerOptions = {
 
 
 
-
 // TASKS /////////////////////////////////////////
+
+// todo - paklize jekyll spustim spolu s gruntem, nebude mi kopirovat styly do _site. Asi. pridat proto dalsi destinaci do build tasku. ?
+// todo - rozdelit produkcni a development gulp do dvou souboru?
+// extrahovat cesty?
+
+// build something like this!!!
+// - clean, organised, well commented (and possibly customizable) gulp task. http://drewbarontini.com/articles/building-a-better-gulpfile/
 
 gulp.task('sass', function() {
     return gulp.src(paths.styles)
